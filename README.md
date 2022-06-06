@@ -1,5 +1,5 @@
 # csk-website
 
-http://cskone.ru/
+https://cskone.ru/
 
 PHP, Laravel, MySQL
