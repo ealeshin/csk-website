@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    
+    <header>
+        <div class="column">
+            <div class="column">logo</div>
+            <div class="column">phone</div>
+            <div class="column">search</div>
+        </div>
+        <div class="column">
+            <div class="column">question</div>
+            <div class="column">cart</div>
+        </div>
+    </header>
+    <nav>
+        <a href="#">О компании</a>
+        <a href="#">Каталог ЦСК</a>
+        <a href="#">Контакты</a>
+        <a href="#">Наши партнёры</a>
+    </nav>
+    <div class="slider">
+        main slider
+    </div>
 </body>
 </html>
