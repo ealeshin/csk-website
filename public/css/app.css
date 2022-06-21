@@ -38,3 +38,13 @@ nav a {
   height: 400px;
   background-image: linear-gradient(to left top, blue, red);
 }
+
+.categories {
+  display: flex;
+  width: 100%;
+}
+.categories .category {
+  width: 20%;
+  padding: 16px;
+  background-color: darkgray;
+}

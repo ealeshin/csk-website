@@ -28,5 +28,13 @@
     <div class="slider">
         main slider
     </div>
+    <div class="categories">
+        <div class="category">First</div>
+        <div class="category">Second</div>
+        <div class="category">Third</div>
+        <div class="category">Fourth</div>
+        <div class="category">Fifth</div>
+        <div class="category">Sixth</div>
+    </div>
 </body>
 </html>
