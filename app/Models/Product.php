@@ -24,6 +24,6 @@ class Product extends Model
         $disk = "public";
         $destinationPath = "products";
 
-        $this->imageMultipleUpload($value, $attributeName, 'image', $disk, $destinationPath, true, 'jpg', 840);
+        $this->imageMultipleUpload($value, $attributeName, 'image', $disk, $destinationPath, false, 'jpg', 840);
     }
 }
