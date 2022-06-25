@@ -38,12 +38,32 @@ class ProductCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb();
+        CRUD::addColumns([
+            [
+                'name' => 'code',
+                'label' => 'Артикул'
+            ],
+            [
+                'name' => 'name',
+                'label' => 'Наименование'
+            ]
+        ]);
     }
 
 	protected function setupShowOperation()
 	{
-		$this->crud->set('show.setFromDb', true);
+		$this->crud->set('show.setFromDb', false);
+
+        CRUD::addColumns([
+            [
+                'name' => 'code',
+                'label' => 'Артикул'
+            ],
+            [
+                'name' => 'name',
+                'label' => 'Наименование'
+            ]
+        ]);
 	}
 
     /**
@@ -54,7 +74,63 @@ class ProductCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        
+        CRUD::addFields([
+            [
+                'name' => 'category_id',
+                'label' => 'Категория',
+                'type' => 'number'
+            ],
+            [
+                'name' => 'code',
+                'label' => 'Артикул',
+                'type' => 'text'
+            ],
+            [
+                'name' => 'barcode',
+                'label' => 'Штрихкод',
+                'type' => 'number'
+            ],
+            [
+                'name' => 'name',
+                'label' => 'Наименование',
+                'type' => 'text'
+            ],
+            [
+                'name' => 'price',
+                'label' => 'Цена',
+                'type' => 'number',
+                'attributes' => [
+                    'step' => 0.01
+                ]
+            ],
+            [
+                'name' => 'in_stock',
+                'label' => 'В наличии',
+                'type' => 'checkbox',
+                'default' => true
+            ],
+            [
+                'name' => 'active',
+                'label' => 'Показывать на сайте',
+                'type' => 'checkbox',
+                'default' => true
+            ],
+            [
+                'name' => 'images',
+                'label' => 'Изображения',
+                'type' => 'repeatable',
+                'fields' => [
+                    [
+                        'name' => 'image',
+                        'type' => 'image',
+                        'label' => 'Изображение',
+                        'wrapper' => ['class' => 'form-group col-md-4'],
+                        'max_file_size' => 2097152,
+                    ],
+                ],
+                'new_item_label' => 'Добавить изображение',
+            ],
+        ]);
     }
 
     /**
