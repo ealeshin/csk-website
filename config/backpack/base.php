@@ -24,7 +24,7 @@ return [
     // ----
 
     // Project name. Shown in the window title.
-    'project_name' => 'Backpack Admin Panel',
+    'project_name' => 'CSK Back Office',
 
     // When clicking on the admin panel's top-left logo/name,
     // where should the user be redirected?
@@ -72,10 +72,10 @@ return [
     // ------
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo'   => '<b>Csk</b>one.ru',
+    'project_logo'   => '<b>CSK</b>&nbsp;Back Office',
 
     // Show / hide breadcrumbs on admin panel pages.
-    'breadcrumbs' => true,
+    'breadcrumbs' => false,
 
     // Horizontal navbar classes. Helps make the admin panel look similar to your project's design.
     'header_class' => 'app-header bg-light border-0 navbar',
