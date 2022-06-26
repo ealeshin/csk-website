@@ -76,9 +76,10 @@ class ProductCrudController extends CrudController
     {
         CRUD::addFields([
             [
-                'name' => 'category_id',
+                'name' => 'category',
                 'label' => 'Категория',
-                'type' => 'number'
+                'type' => 'select',
+                'allows_null' => false
             ],
             [
                 'name' => 'code',
