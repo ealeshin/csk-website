@@ -18,6 +18,11 @@ class Product extends Model
         'images' => 'array',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function setImagesAttribute($value)
     {
         $attributeName = "images";
