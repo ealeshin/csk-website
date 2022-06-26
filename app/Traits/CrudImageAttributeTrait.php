@@ -5,7 +5,7 @@ namespace App\Traits;
 trait CRUDImageAttributeTrait
 {
 
-    public function imageUpload($value, $attribute_name, $disk, $destination_path, $format = 'png')
+    public function imageUpload($value, $attribute_name, $disk, $destination_path, $format = 'jpg')
     {
         // if the image was erased
         if ($value == null) {
