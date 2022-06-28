@@ -28,16 +28,12 @@
         <a href="#">Контакты</a>
         <a href="#">Наши партнёры</a>
     </nav>
-    <!-- Slider main container -->
     <div class="swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            @foreach($slides as $url)
+                <div class="swiper-slide" style="background-image: url('{{$url}}')"></div>
+            @endforeach
         </div>
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
