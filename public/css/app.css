@@ -1,3 +1,67 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("fonts/myriad-pro/MYRIADPRO-REGULAR.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed"), url("fonts/myriad-pro/MYRIADPRO-COND.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Condensed Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed Italic"), url("fonts/myriad-pro/MYRIADPRO-CONDIT.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("fonts/myriad-pro/MyriadPro-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold"), url("fonts/myriad-pro/MYRIADPRO-SEMIBOLD.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Semibold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold Italic"), url("fonts/myriad-pro/MYRIADPRO-SEMIBOLDIT.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Bold Condensed";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Condensed"), url("fonts/myriad-pro/MYRIADPRO-BOLDCOND.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("fonts/myriad-pro/MYRIADPRO-BOLD.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Italic"), url("fonts/myriad-pro/MYRIADPRO-BOLDIT.woff") format("woff");
+}
+@font-face {
+  font-family: "Myriad Pro Bold Condensed Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold Condensed Italic"), url("fonts/myriad-pro/MYRIADPRO-BOLDCONDIT.woff") format("woff");
+}
+.brand-color {
+  color: #D0021B;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -7,25 +71,51 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #ccc;
   padding: 25px;
+  padding-top: 8px;
+  font-family: "Myriad Pro Semibold";
 }
-header .column {
+
+.column {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-self: flex-end;
   margin-right: 32px;
 }
+.column .nav {
+  flex-direction: column;
+}
 
-nav {
+.row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: #fed15b;
-  padding: 16px 0;
+  justify-content: flex-start;
+  align-self: flex-start;
 }
-nav a {
+
+.search-container {
+  padding-bottom: 20px;
+  color: #7f7f7f;
+}
+
+.icon {
+  font-size: 1.6em;
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+.nav-link {
   color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 4px;
+  border-bottom: 4px solid #D0021B;
+}
+.nav-link:hover {
+  color: #D0021B;
 }
 
 .swiper {
@@ -36,7 +126,7 @@ nav a {
   height: 400px;
 }
 .swiper-slide {
-  background-image: linear-gradient(to left top, blue, red);
+  background-size: cover;
 }
 
 .categories {
@@ -47,4 +137,8 @@ nav a {
   width: 20%;
   padding: 16px;
   background-color: darkgray;
+}
+
+.logo {
+  width: 128px;
 }
