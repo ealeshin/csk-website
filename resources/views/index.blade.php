@@ -108,12 +108,13 @@
     </section>
     <section id="mp-catalog">
         <div class="items">
-            <div class="card">23</div>
-            <div class="card">3213</div>
-            <div class="card">fdsf</div>
-            <div class="card">fsdfd</div>
-            <div class="card">vcxmdf</div>
-            <div class="card">pkkdd</div>
+            @foreach($products as $product)
+            <div class="card">
+                <div class="card-image" style="background-image: url('{{$product->images[0]['image']}}');"></div>
+                <div class="card-title">{{$product->name}}</div>
+                <a href="#">Подробнее о товаре</a>
+            </div>
+            @endforeach
         </div>
     </section>
 </body>
