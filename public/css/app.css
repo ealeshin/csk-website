@@ -194,3 +194,9 @@ header {
   border-radius: 18px;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
 }
+.search-input:hover {
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
+}
+.search-input:focus {
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
+}
