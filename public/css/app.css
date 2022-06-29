@@ -140,6 +140,7 @@ header {
 }
 
 .swiper {
+  --swiper-theme-color: rgba(0, 0, 0, 0.33);
   display: block;
   font-size: 24px;
   color: white;
@@ -156,6 +157,7 @@ header {
   justify-content: space-around;
   width: 100%;
   padding: 42px 32px;
+  background-image: linear-gradient(to bottom, white, #d1e4ff);
 }
 .categories .category {
   flex: 1 0 21%;
