@@ -14,6 +14,11 @@ class Slide extends Model
 
     protected $guarded = [];
 
+    static function getArray()
+    {
+        return self::where('active', true)->orderBy('sort')->pluck('image')->toArray();
+    }
+
     public function setImageAttribute($value)
     {
         $attributeName = "image";
