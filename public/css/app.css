@@ -188,11 +188,13 @@ header {
   width: 384px;
   font-family: "Myriad Pro";
   font-size: 18px;
-  color: #7f7f7f;
   padding: 8px 16px 6px 16px;
   border: none;
   border-radius: 18px;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
+}
+.search-input::placeholder {
+  color: #ccc;
 }
 .search-input:hover {
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
