@@ -19,7 +19,7 @@
             </div>
             <div class="column nav">
                 <div class="row search-container bp">
-                    Поиск
+                    <input type="text" class="search-input" placeholder="Поиск">
                 </div>
                 <div class="row">
                     <div class="column">
