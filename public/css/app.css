@@ -62,9 +62,17 @@
   color: #D0021B;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #D0021B;
+}
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Myriad Pro Semibold", sans-serif;
 }
 
 header {
@@ -87,6 +95,10 @@ header {
   flex-direction: column;
 }
 
+.nm {
+  margin-right: 0;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -94,8 +106,11 @@ header {
   align-self: flex-start;
 }
 
-.search-container {
+.bp {
   padding-bottom: 20px;
+}
+
+.search-container {
   color: #7f7f7f;
 }
 
@@ -105,17 +120,21 @@ header {
   margin-right: 4px;
 }
 
+.phone {
+  font-size: 32px;
+  letter-spacing: -0.5px;
+}
+.phone .icon {
+  font-size: 1em;
+  margin-right: 2px;
+}
+
 .nav-link {
-  color: black;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   letter-spacing: 4px;
   border-bottom: 4px solid #D0021B;
-}
-.nav-link:hover {
-  color: #D0021B;
 }
 
 .swiper {
@@ -131,14 +150,33 @@ header {
 
 .categories {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
+  padding: 42px 32px;
 }
 .categories .category {
-  width: 20%;
+  flex: 1 0 21%;
+  width: auto;
   padding: 16px;
-  background-color: darkgray;
+}
+.categories .category a {
+  display: inline-block;
+  font-family: "Myriad Pro";
+  color: #06c;
+  border-bottom: 1px solid #06c;
+  margin-bottom: 12px;
+}
+.categories .category a.root-category {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.categories .category a:hover {
+  color: #D0021B;
+  border-color: #D0021B;
 }
 
 .logo {
+  padding-left: 32px;
   width: 128px;
 }

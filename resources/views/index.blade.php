@@ -14,11 +14,11 @@
 <body>
     <header>
         <div class="column">
-            <div class="column">
+            <div class="column logo-container">
                 <img src="images/logo.svg" alt="CSK Logo" class="logo">
             </div>
             <div class="column nav">
-                <div class="row search-container">
+                <div class="row search-container bp">
                     Поиск
                 </div>
                 <div class="row">
@@ -38,14 +38,24 @@
             </div>
         </div>
         <div class="column">
-            <div class="column">
-                <i class="la la-question icon"></i>
-                Вопрос директору
-            </div>
-            <div class="column">
-                <i class="la la-shopping-cart icon"></i>
-                Корзина [0]
-            </div>
+            <div class="column nav">
+                <div class="column nm bp">
+                    <div class="phone">
+                        <i class="la la-phone icon"></i>
+                        8 800 123-45-67
+                    </div>
+                </div>
+                <div class="column nm">
+                    <div class="column">
+                        <i class="la la-question icon"></i>
+                        Вопрос директору
+                    </div>
+                    <div class="column nm">
+                        <i class="la la-shopping-cart icon"></i>
+                        Корзина [0]
+                    </div>
+                </div>
+            </div>    
         </div>
     </header>
     <div class="swiper">
@@ -58,12 +68,35 @@
         <div class="swiper-button-next"></div>
     </div>
     <div class="categories">
-        <div class="category">First</div>
-        <div class="category">Second</div>
-        <div class="category">Third</div>
-        <div class="category">Fourth</div>
-        <div class="category">Fifth</div>
-        <div class="category">Sixth</div>
+        <div class="category">
+            <a href="#" class="root-category">Лакокрасочные материалы</a><br>
+            <a href="#">Акриловые составы</a><br>
+            <a href="#">Декоративные покрытия</a><br>
+            <a href="#">Пены монтажные и герметики</a><br>
+        </div>
+        <div class="category">
+            <a href="#" class="root-category">Инструменты</a><br>
+            <a href="#">Штукатурно-малярный инструмент</a><br>
+            <a href="#">Ленты клеящие, малярные</a><br>
+            <a href="#">Измерительный инструмент</a><br>
+        </div>
+        <div class="category">
+            <a href="#" class="root-category">Категория</a><br>
+            <a href="#">Подкатегория первая</a><br>
+            <a href="#">Подкатегория вторая</a><br>
+        </div>
+        <div class="category">
+            <a href="#" class="root-category">Категория</a><br>
+            <a href="#">Подкатегория первая</a><br>
+            <a href="#">Подкатегория вторая</a><br>
+        </div>
+        <div class="category">
+            <a href="#" class="root-category">Категория</a><br>
+            <a href="#">Подкатегория первая</a><br>
+            <a href="#">Подкатегория вторая</a><br>
+            <a href="#">Подкатегория третья</a><br>
+            <a href="#">Подкатегория четвёртая</a><br>
+        </div>
     </div>
 </body>
 </html>
