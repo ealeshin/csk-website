@@ -180,6 +180,7 @@ header {
 
 .logo {
   padding-left: 32px;
+  padding-right: 16px;
   width: 128px;
 }
 
@@ -188,7 +189,7 @@ header {
   font-family: "Myriad Pro";
   font-size: 18px;
   color: #7f7f7f;
-  padding: 8px 12px 6px 12px;
+  padding: 8px 16px 6px 16px;
   border: none;
   border-radius: 18px;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
