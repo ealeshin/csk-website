@@ -162,10 +162,10 @@ section {
 }
 
 #mp-catalog {
-  background-color: beige;
+  background-image: linear-gradient(45deg, #f5f7fa, #c3cfe2);
 }
 
-.categories {
+.items {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -173,25 +173,35 @@ section {
   box-sizing: border-box;
   padding: 32px 0 50px 0;
 }
-.categories .category {
+.items .category {
   width: 25%;
   margin-right: 64px;
   margin-top: 50px;
 }
-.categories .category a {
+.items .category a {
   display: inline-block;
   font-family: "Myriad Pro";
   color: #06c;
   border-bottom: 1px solid #06c;
   margin-bottom: 12px;
 }
-.categories .category a.root-category {
+.items .category a.root-category {
   font-size: 24px;
   margin-bottom: 20px;
 }
-.categories .category a:hover {
+.items .category a:hover {
   color: #D0021B;
   border-color: #D0021B;
+}
+.items .card {
+  width: 23%;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-right: 25px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  height: 300px;
 }
 
 .catalog {

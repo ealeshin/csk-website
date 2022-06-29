@@ -68,7 +68,7 @@
         <div class="swiper-button-next"></div>
     </div>
     <section id="categories">
-        <div class="categories">
+        <div class="items">
             <div class="category">
                 <a href="#" class="root-category">Лакокрасочные материалы</a><br>
                 <a href="#">Акриловые составы</a><br>
@@ -107,8 +107,13 @@
         </div>
     </section>
     <section id="mp-catalog">
-        <div class="catalog">
-            ff
+        <div class="items">
+            <div class="card">23</div>
+            <div class="card">3213</div>
+            <div class="card">fdsf</div>
+            <div class="card">fsdfd</div>
+            <div class="card">vcxmdf</div>
+            <div class="card">pkkdd</div>
         </div>
     </section>
 </body>
