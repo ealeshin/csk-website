@@ -194,14 +194,35 @@ section {
   border-color: #D0021B;
 }
 .items .card {
-  width: 23%;
+  width: 294px;
   box-sizing: border-box;
   margin-top: 25px;
   margin-right: 25px;
   background-color: white;
   padding: 16px;
   border-radius: 16px;
-  height: 300px;
+  height: 392px;
+  transition: 0.2s;
+}
+.items .card-image {
+  width: 262px;
+  height: 262px;
+  background-size: contain;
+}
+.items .card-title {
+  margin: 12px 0;
+  height: 57px;
+}
+.items .card a {
+  font-family: "Myriad Pro";
+  color: #06c;
+  text-decoration: underline;
+}
+.items .card:hover {
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
+}
+.items .card:hover a {
+  color: #D0021B;
 }
 
 .catalog {
