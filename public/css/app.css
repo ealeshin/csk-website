@@ -186,6 +186,10 @@ header {
   width: 128px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .search-input {
   width: 384px;
   font-family: "Myriad Pro";
