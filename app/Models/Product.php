@@ -23,6 +23,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    static function getPopular()
+    {
+        return self::take(4)->get();
+    }
+
     public function setImagesAttribute($value)
     {
         $attributeName = "images";
