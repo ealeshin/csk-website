@@ -15,3 +15,4 @@ use App\Http\Controllers\PageController;
 */
 
 Route::get('/', [PageController::class, 'index']);
+Route::get('/product/{id}', [PageController::class, 'product']);
