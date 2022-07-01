@@ -19,6 +19,13 @@ class PageController extends Controller
         return view('contacts');
     }
 
+    public function catalog()
+    {
+        return view('catalog', [
+            'products' => Product::getPopular()
+        ]);
+    }
+
     public function product($id)
     {
         return view('product', [

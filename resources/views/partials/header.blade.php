@@ -28,7 +28,7 @@
                         <a href="/about" class="nav-link">О компании</a>
                     </div>
                     <div class="column">
-                        <a href="/catalogs" class="nav-link">Каталог ЦСК</a>
+                        <a href="/catalog" class="nav-link">Каталог ЦСК</a>
                     </div>
                     <div class="column">
                         <a href="/contacts" class="nav-link">Контакты</a>

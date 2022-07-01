@@ -16,4 +16,5 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class, 'index']);
 Route::get('/contacts', [PageController::class, 'contacts']);
+Route::get('/catalog', [PageController::class, 'catalog']);
 Route::get('/product/{id}', [PageController::class, 'product']);
