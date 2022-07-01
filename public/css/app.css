@@ -67,6 +67,35 @@ body {
   font-family: "Myriad Pro Semibold", sans-serif;
 }
 
+h1 {
+  font-family: "Myriad Pro Semibold";
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0;
+  line-height: 2;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 27px;
+  margin: 0;
+  line-height: 1;
+}
+
+.contacts p {
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Myriad Pro";
+  font-weight: normal;
+}
+.contacts-block {
+  margin: 12px 0;
+}
+.contacts-block-title {
+  padding: 4px 0;
+  font-size: 20px;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -105,6 +134,10 @@ header {
 
 .bp {
   padding-bottom: 20px;
+}
+
+.lp {
+  padding-left: 50px;
 }
 
 .search-container {
@@ -168,13 +201,6 @@ section {
   margin-top: 32px;
   padding: 25px 40px;
   border-radius: 18px;
-}
-.product-container h1 {
-  font-family: "Myriad Pro Semibold";
-  font-weight: normal;
-  font-size: 36px;
-  margin: 0;
-  line-height: 2;
 }
 .product-layout {
   display: flex;

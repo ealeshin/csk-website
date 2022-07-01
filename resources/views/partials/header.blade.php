@@ -25,16 +25,16 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <a href="#" class="nav-link">О компании</a>
+                        <a href="/about" class="nav-link">О компании</a>
                     </div>
                     <div class="column">
-                        <a href="#" class="nav-link">Каталог ЦСК</a>
+                        <a href="/catalogs" class="nav-link">Каталог ЦСК</a>
                     </div>
                     <div class="column">
-                        <a href="#" class="nav-link">Контакты</a>
+                        <a href="/contacts" class="nav-link">Контакты</a>
                     </div>
                     <div class="column">
-                        <a href="#" class="nav-link">Наши партнёры</a>
+                        <a href="/partnerrs" class="nav-link">Наши партнёры</a>
                     </div>
                 </div>
             </div>

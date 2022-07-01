@@ -14,6 +14,11 @@ class PageController extends Controller
         ]);
     }
 
+    public function contacts()
+    {
+        return view('contacts');
+    }
+
     public function product($id)
     {
         return view('product', [
