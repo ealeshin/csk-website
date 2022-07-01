@@ -15,7 +15,9 @@
     <header>
         <div class="column">
             <div class="column logo-container">
-                <img src="/images/logo.svg" alt="CSK Logo" class="logo">
+                <a href="/" class="logo-link">
+                    <img src="/images/logo.svg" alt="CSK Logo" class="logo">
+                </a>
             </div>
             <div class="column nav">
                 <div class="row search-container bp">

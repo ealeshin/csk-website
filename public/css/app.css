@@ -62,14 +62,6 @@
   color: #D0021B;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  color: #D0021B;
-}
-
 body {
   margin: 0;
   font-family: "Myriad Pro Semibold", sans-serif;
@@ -83,6 +75,10 @@ header {
   padding-top: 8px;
   font-family: "Myriad Pro Semibold";
   background-image: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+}
+
+.logo-link {
+  line-height: 0.8em;
 }
 
 .column {
@@ -133,10 +129,10 @@ header {
 
 .nav-link {
   text-transform: uppercase;
+  text-decoration: underline;
   font-size: 16px;
   letter-spacing: 2px;
   color: #D0021B;
-  border-bottom: 1px solid #D0021B;
 }
 
 .swiper {
@@ -182,7 +178,7 @@ section {
   display: inline-block;
   font-family: "Myriad Pro";
   color: #06c;
-  border-bottom: 1px solid #06c;
+  text-decoration: underline;
   margin-bottom: 12px;
 }
 .items .category a.root-category {
