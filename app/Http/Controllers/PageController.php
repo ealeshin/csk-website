@@ -14,8 +14,10 @@ class PageController extends Controller
         ]);
     }
 
-    public function product()
+    public function product($id)
     {
-        abort(404);
+        return view('product', [
+            'id' => $id
+        ]);
     }
 }
