@@ -320,6 +320,20 @@ section {
   justify-content: flex-start;
   width: 1280px;
 }
+.catalog .items {
+  width: 985px;
+}
+
+.sidebar {
+  display: block;
+  background-color: #fdf1cd;
+  width: 240px;
+  box-sizing: border-box;
+  margin-top: 56px;
+  margin-right: 25px;
+  padding: 16px;
+  border-radius: 16px;
+}
 
 .breadcrumbs {
   font-family: "Myriad Pro";
