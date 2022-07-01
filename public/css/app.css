@@ -326,13 +326,19 @@ section {
 
 .sidebar {
   display: block;
-  background-color: #fdf1cd;
+  background-color: #fff7e1;
   width: 240px;
   box-sizing: border-box;
   margin-top: 56px;
   margin-right: 25px;
   padding: 16px;
   border-radius: 16px;
+}
+.sidebar-link {
+  margin: 4px 0;
+}
+.sidebar-link a {
+  font-family: "Myriad Pro";
 }
 
 .breadcrumbs {

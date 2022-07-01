@@ -2,7 +2,16 @@
     <section id="categories">
         <div class="catalog">
             <div class="sidebar">
-                sidebar<br>content
+                <div class="sidebar-link bp">
+                    <a href="#">Все товары</a>
+                </div>
+                <div class="sidebar-link">
+                    <a href="#">Первая категория</a>
+                </div>
+                <div class="sidebar-link">
+                    <a href="#">Вторая категория</a>
+                </div>
+                
             </div>
             <div class="items">
                 @foreach($products as $product)
