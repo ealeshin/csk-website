@@ -12,8 +12,5 @@
             @endforeach
         </div>
     </section>
-    <section>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae218008c5bcb0b7630c1d128a103864269c2a3eda31fd3440827c2f8097cbac4&amp;source=constructor" width="640" height="400" frameborder="0"></iframe>
-    </section>
 </body>
 </html>

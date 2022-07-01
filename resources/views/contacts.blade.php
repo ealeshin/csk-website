@@ -25,6 +25,12 @@
                         <p>с 8:00 до 17:00</p>
                         <p>Выходные: суббота, воскресенье</p>
                     </div>
+                    <div class="contacts-block">
+                        <p class="contacts-block-title">E-mail:</p>
+                        <p>
+                            <a href="mailto:csk-opt@cskone.ru">csk-opt@cskone.ru</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
