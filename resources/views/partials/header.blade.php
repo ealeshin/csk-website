@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Центр Строительной Комплектации</title>
-    <link rel="stylesheet" href="css/app.css?{{ time() }}">
-    <link rel="stylesheet" href="packages/line-awesome/css/line-awesome.css">
+    <link rel="stylesheet" href="/css/app.css?{{ time() }}">
+    <link rel="stylesheet" href="/packages/line-awesome/css/line-awesome.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="js/app.js"></script>
+    <script defer src="/js/app.js"></script>
 </head>
 <body>
     <header>
         <div class="column">
             <div class="column logo-container">
-                <img src="images/logo.svg" alt="CSK Logo" class="logo">
+                <img src="/images/logo.svg" alt="CSK Logo" class="logo">
             </div>
             <div class="column nav">
                 <div class="row search-container bp">
