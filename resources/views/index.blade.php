@@ -4,11 +4,11 @@
     <section id="mp-catalog">
         <div class="items">
             @foreach($products as $product)
-            <a class="card">
+            <div class="card">
                 <div class="card-image" style="background-image: url('{{$product->images[0]['image']}}');"></div>
                 <div class="card-title">{{$product->name}}</div>
-                <div class="card-more">Подробнее о товаре</div>
-            </a>
+                <a class="card-more" href="product/{{$product->id}}">Подробнее о товаре</a>
+            </div>
             @endforeach
         </div>
     </section>

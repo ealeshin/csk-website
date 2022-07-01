@@ -190,7 +190,6 @@ section {
   border-color: #D0021B;
 }
 .items .card {
-  cursor: pointer;
   width: 294px;
   box-sizing: border-box;
   margin-top: 25px;
@@ -227,6 +226,19 @@ section {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 1280px;
+}
+
+.breadcrumbs {
+  font-family: "Myriad Pro";
+}
+.breadcrumbs * {
+  color: #06c;
+}
+.breadcrumbs span {
+  padding: 0 5px;
+}
+.breadcrumbs a:hover {
+  color: #D0021B;
 }
 
 .logo {
