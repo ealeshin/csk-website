@@ -17,7 +17,7 @@ class PageController extends Controller
     public function product($id)
     {
         return view('product', [
-            'id' => $id
+            'product' => Product::find($id)
         ]);
     }
 }

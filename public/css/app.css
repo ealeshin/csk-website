@@ -161,6 +161,69 @@ section {
   background-image: linear-gradient(45deg, #f5f7fa, #c3cfe2);
 }
 
+.product-container {
+  display: block;
+  width: 1280px;
+  background-color: white;
+  margin-top: 32px;
+  padding: 25px 40px;
+  border-radius: 18px;
+}
+.product-container h1 {
+  font-family: "Myriad Pro Semibold";
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0;
+  line-height: 2;
+}
+.product-layout {
+  display: flex;
+  flex-direction: row;
+}
+.product-image {
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+  margin-right: 64px;
+}
+.product-info {
+  font-family: "Myriad Pro";
+  width: auto;
+  padding: 25px 0;
+}
+.product-info-block {
+  display: flex;
+  flex-direction: row;
+  width: 640px;
+  margin: 4px 0;
+}
+.product-info-key {
+  width: 25%;
+  color: #999;
+}
+.product-info-value {
+  width: 70%;
+}
+.product-price-block {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 32px;
+}
+.product-price-value {
+  font-size: 32px;
+}
+.product-price-cart {
+  margin-top: 25px;
+}
+.product-price-cart a {
+  padding: 13px 36px 12px 36px;
+  border-radius: 8px;
+  background-color: #D0021B;
+  color: white;
+  text-decoration: none;
+}
+
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -235,6 +298,9 @@ section {
   color: #06c;
 }
 .breadcrumbs span {
+  color: black;
+}
+.breadcrumbs .arrow {
   padding: 0 5px;
 }
 .breadcrumbs a:hover {
