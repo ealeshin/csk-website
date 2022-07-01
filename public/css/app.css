@@ -190,6 +190,7 @@ section {
   border-color: #D0021B;
 }
 .items .card {
+  cursor: pointer;
   width: 294px;
   box-sizing: border-box;
   margin-top: 25px;
@@ -209,16 +210,16 @@ section {
   margin: 12px 0;
   height: 57px;
 }
-.items .card a {
+.items .card-more {
   font-family: "Myriad Pro";
   color: #06c;
   text-decoration: underline;
 }
+.items .card-more:hover {
+  color: #D0021B;
+}
 .items .card:hover {
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
-}
-.items .card:hover a {
-  color: #D0021B;
 }
 
 .catalog {
