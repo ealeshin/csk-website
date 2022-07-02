@@ -413,7 +413,6 @@ input:focus {
     flex-wrap: wrap;
   }
   header .column {
-    flex-direction: column;
     justify-content: center;
     align-self: center;
   }
@@ -427,10 +426,6 @@ input:focus {
   }
 }
 @media (max-width: 903px) {
-  header {
-    flex-direction: column;
-  }
-
   .nav > * {
     align-self: center;
   }
