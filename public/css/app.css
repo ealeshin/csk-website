@@ -412,6 +412,11 @@ input:focus {
   header {
     flex-wrap: wrap;
   }
+  header .column {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
 
   .phone {
     font-size: 20px;
@@ -419,5 +424,14 @@ input:focus {
 
   .ui-links .column {
     margin-right: 0;
+  }
+}
+@media (max-width: 903px) {
+  header {
+    flex-direction: column;
+  }
+
+  .nav > * {
+    align-self: center;
   }
 }
