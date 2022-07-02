@@ -119,10 +119,15 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-self: flex-end;
+  flex-wrap: wrap;
   margin-right: 32px;
 }
 .column .nav {
   flex-direction: column;
+}
+
+.nav-links .column:last-child {
+  margin-right: 0;
 }
 
 .nm {
@@ -162,6 +167,10 @@ header {
 .phone .icon {
   font-size: 1em;
   margin-right: 2px;
+}
+
+.nav {
+  margin-right: 0;
 }
 
 .nav-link {
@@ -384,4 +393,31 @@ input:focus {
 }
 .search-input:focus {
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
+}
+
+@media (max-width: 1216px) {
+  .ui-links .column {
+    margin-top: 12px;
+  }
+
+  .logo-link {
+    margin-bottom: 16px;
+  }
+
+  .nav > * {
+    align-self: flex-start;
+  }
+}
+@media (max-width: 1026px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .phone {
+    font-size: 20px;
+  }
+
+  .ui-links .column {
+    margin-right: 0;
+  }
 }

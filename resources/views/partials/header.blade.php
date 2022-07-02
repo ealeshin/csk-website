@@ -23,7 +23,7 @@
                 <div class="row search-container bp">
                     <input type="text" class="search-input" placeholder="Поиск">
                 </div>
-                <div class="row">
+                <div class="row nav-links">
                     <div class="column">
                         <a href="/about" class="nav-link">О компании</a>
                     </div>
@@ -47,7 +47,7 @@
                         8 800 123-45-67
                     </div>
                 </div>
-                <div class="column nm">
+                <div class="column nm ui-links">
                     <div class="column">
                         <i class="la la-question icon"></i>
                         Вопрос директору
