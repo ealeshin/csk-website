@@ -435,8 +435,16 @@ input:focus {
   }
 }
 @media (max-width: 903px) {
+  header .column {
+    width: 100%;
+  }
+
   .nav > * {
     align-self: center;
+  }
+
+  .nm {
+    padding-bottom: 0;
   }
 
   .nav-links {
