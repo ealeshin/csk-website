@@ -207,6 +207,14 @@ section {
   background-image: linear-gradient(45deg, #f5f7fa, #c3cfe2);
 }
 
+.map {
+  margin-right: 50px;
+}
+.map > iframe {
+  width: 640px;
+  height: 400px;
+}
+
 .product-container {
   display: block;
   width: 1280px;
@@ -218,6 +226,7 @@ section {
 .product-layout {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .product-image {
   width: 400px;
@@ -428,5 +437,13 @@ input:focus {
 @media (max-width: 903px) {
   .nav > * {
     align-self: center;
+  }
+
+  .map {
+    margin-bottom: 32px;
+  }
+  .map > iframe {
+    width: 90vw;
+    height: 400px;
   }
 }
