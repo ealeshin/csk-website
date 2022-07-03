@@ -439,6 +439,14 @@ input:focus {
     align-self: center;
   }
 
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-links .column {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
   .map {
     margin-bottom: 32px;
   }
