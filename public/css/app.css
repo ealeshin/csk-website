@@ -347,6 +347,7 @@ section {
   display: flex;
   flex-direction: column;
   max-width: 240px;
+  height: fit-content;
   background-color: #fff7e1;
   box-sizing: border-box;
   margin-top: 56px;
