@@ -16,7 +16,22 @@ class Category extends Model
 
     public static function getRootCategories()
     {
-        return self::where('active', true)->where('parent_id', null)->get();
+        $all = self::where('active', true)->where('parent_id', null)->get();
+        $notEmpty = $all->filter(function($category) {
+            return $category->isNotEmpty();
+        });
+
+        return $notEmpty;
+    }
+
+    public function isNotEmpty()
+    {
+        if (!$this->parent_id) {
+            $subcategoriesIdArray = $this->getSubcategories()->pluck('id')->toArray();
+            return Product::whereIn('category_id', $subcategoriesIdArray)->where('active', true)->exists();
+        } else {
+            return Product::where('category_id', $this->id)->where('active', true)->exists();
+        }
     }
 
     public function hasSubcategories()
@@ -26,7 +41,12 @@ class Category extends Model
 
     public function getSubcategories()
     {
-        return self::where('parent_id', $this->id)->get();
+        $all = self::where('parent_id', $this->id)->get();
+        $notEmpty = $all->filter(function($category) {
+            return $category->isNotEmpty();
+        });
+
+        return $notEmpty;
     }
 
     public function setImagesAttribute($value)
