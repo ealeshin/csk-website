@@ -1,39 +1,17 @@
 <section id="categories">
     <div class="items">
+        @php
+            $categories = \App\Models\Category::getRootCategories();
+        @endphp
+        @foreach($categories as $category)
         <div class="category">
-            <a href="#" class="root-category">Лакокрасочные материалы</a><br>
-            <a href="#">Акриловые составы</a><br>
-            <a href="#">Декоративные покрытия</a><br>
-            <a href="#">Пены монтажные и герметики</a><br>
+            <a href="/category/{{$category->id}}" class="root-category">{{$category->title}}</a><br>
+            @if($category->hasSubcategories())
+                @foreach ($category->getSubcategories() as $subcategory)
+                <a href="/category/{{$subcategory->id}}">{{$subcategory->title}}</a><br>
+                @endforeach
+            @endif
         </div>
-        <div class="category">
-            <a href="#" class="root-category">Инструменты</a><br>
-            <a href="#">Штукатурно-малярный инструмент</a><br>
-            <a href="#">Ленты клеящие, малярные</a><br>
-            <a href="#">Измерительный инструмент</a><br>
-        </div>
-        <div class="category">
-            <a href="#" class="root-category">Категория</a><br>
-            <a href="#">Подкатегория первая</a><br>
-            <a href="#">Подкатегория вторая</a><br>
-        </div>
-        <div class="category">
-            <a href="#" class="root-category">Категория</a><br>
-            <a href="#">Подкатегория первая</a><br>
-            <a href="#">Подкатегория вторая</a><br>
-        </div>
-        <div class="category">
-            <a href="#" class="root-category">Категория</a><br>
-            <a href="#">Подкатегория первая</a><br>
-            <a href="#">Подкатегория вторая</a><br>
-            <a href="#">Подкатегория третья</a><br>
-            <a href="#">Подкатегория четвёртая</a><br>
-        </div>
-        <div class="category">
-            <a href="#" class="root-category">Категория</a><br>
-            <a href="#">Подкатегория первая</a><br>
-            <a href="#">Подкатегория вторая</a><br>
-            <a href="#">Подкатегория третья</a><br>
-        </div>
+        @endforeach
     </div>
 </section>
