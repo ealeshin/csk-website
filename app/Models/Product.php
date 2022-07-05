@@ -28,7 +28,7 @@ class Product extends Model
         return Category::find($this->category->parent_id);
     }
 
-    static function getPopular()
+    public static function getPopular()
     {
         return self::take(4)->get();
     }

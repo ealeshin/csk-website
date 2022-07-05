@@ -24,13 +24,24 @@ class Category extends Model
         return $notEmpty;
     }
 
+    public function products()
+    {
+        return $this->checkProducts(true);
+    }
+
     public function isNotEmpty()
     {
+        return $this->checkProducts();
+    }
+
+    public function checkProducts($get = false)
+    {
+        $method = $get ? 'get' : 'exists';
         if (!$this->parent_id) {
             $subcategoriesIdArray = $this->getSubcategories()->pluck('id')->toArray();
-            return Product::whereIn('category_id', $subcategoriesIdArray)->where('active', true)->exists();
+            return Product::whereIn('category_id', $subcategoriesIdArray)->where('active', true)->{$method}();
         } else {
-            return Product::where('category_id', $this->id)->where('active', true)->exists();
+            return Product::where('category_id', $this->id)->where('active', true)->{$method}();
         }
     }
 

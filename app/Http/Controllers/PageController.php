@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -29,8 +30,9 @@ class PageController extends Controller
 
     public function category($id)
     {
+        $category = Category::find($id);
         return view('catalog', [
-            'products' => Product::where('category_id', $id)->get(),
+            'products' => $category->products(),
             'current' => $id
         ]);
     }

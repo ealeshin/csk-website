@@ -9,7 +9,7 @@
                     $categories = \App\Models\Category::getRootCategories();
                 @endphp
                 @foreach($categories as $category)
-                    <div class="sidebar-link">
+                    <div class="sidebar-link @if($current == $category->id) sidebar-link-current @endif">
                         <a href="/category/{{$category->id}}">{{$category->title}}</a>
                     </div>
                     @if($category->hasSubcategories())
