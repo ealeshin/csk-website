@@ -4,9 +4,9 @@
             <div class="breadcrumbs">
                 <a href="/catalog">Каталог ЦСК</a>
                 <span class="arrow">&gt;</span>
-                <a href="#">Категория</a>
+                <a href="/category/{{$category->id}}">{{$category->title}}</a>
                 <span class="arrow">&gt;</span>
-                <a href="#">Подкатегория</a>
+                <a href="/category/{{$subcategory->id}}">{{$subcategory->title}}</a>
                 <span class="arrow">&gt;</span>
                 <span>{{$product->name}}</span>
             </div>

@@ -28,8 +28,11 @@ class PageController extends Controller
 
     public function product($id)
     {
+        $product = Product::find($id);
         return view('product', [
-            'product' => Product::find($id)
+            'product' => $product,
+            'category' => $product->getRootCategory(),
+            'subcategory' => $product->category
         ]);
     }
 }

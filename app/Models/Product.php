@@ -23,6 +23,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function getRootCategory()
+    {
+        return Category::find($this->category->parent_id);
+    }
+
     static function getPopular()
     {
         return self::take(4)->get();
