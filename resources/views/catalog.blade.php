@@ -2,7 +2,7 @@
     <section id="categories">
         <div class="catalog">
             <div class="sidebar">
-                <div class="sidebar-link sidebar-link-current">
+                <div class="sidebar-link @if(!$current) sidebar-link-current @endif">
                     <a href="/catalog">Все товары</a>
                 </div>
                 @php
@@ -14,7 +14,7 @@
                     </div>
                     @if($category->hasSubcategories())
                         @foreach ($category->getSubcategories() as $subcategory)
-                            <div class="sidebar-link-subcategory">
+                            <div class="sidebar-link-subcategory @if($current == $subcategory->id) sidebar-link-current @endif">
                                 <a href="/category/{{$subcategory->id}}">{{$subcategory->title}}</a>
                             </div>
                         @endforeach

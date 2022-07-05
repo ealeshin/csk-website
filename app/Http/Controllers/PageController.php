@@ -22,7 +22,16 @@ class PageController extends Controller
     public function catalog()
     {
         return view('catalog', [
-            'products' => Product::getPopular()
+            'products' => Product::getPopular(),
+            'current' => null
+        ]);
+    }
+
+    public function category($id)
+    {
+        return view('catalog', [
+            'products' => Product::where('category_id', $id)->get(),
+            'current' => $id
         ]);
     }
 
