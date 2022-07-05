@@ -355,15 +355,25 @@ section {
   padding: 16px;
   border-radius: 16px;
 }
-.sidebar-link {
-  margin: 4px 0;
-}
-.sidebar-link a {
+.sidebar a {
   font-family: "Myriad Pro";
   color: black;
 }
-.sidebar-link a:hover {
+.sidebar a:hover {
   text-decoration: none;
+}
+.sidebar-link {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.sidebar-link-subcategory {
+  font-size: 14px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+}
+.sidebar-link-current {
+  font-family: "Myriad Pro Semibold";
+  font-weight: bold;
 }
 
 .breadcrumbs {
