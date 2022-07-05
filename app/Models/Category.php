@@ -14,6 +14,21 @@ class Category extends Model
 
     protected $guarded = [];
 
+    public static function getRootCategories()
+    {
+        return self::where('active', true)->where('parent_id', null)->get();
+    }
+
+    public function hasSubcategories()
+    {
+        return self::where('parent_id', $this->id)->exists();
+    }
+
+    public function getSubcategories()
+    {
+        return self::where('parent_id', $this->id)->get();
+    }
+
     public function setImagesAttribute($value)
     {
         $attributeName = "image";

@@ -2,15 +2,24 @@
     <section id="categories">
         <div class="catalog">
             <div class="sidebar">
-                <div class="sidebar-link bp">
-                    <a href="#">Все товары</a>
+                <div class="sidebar-link sidebar-link-current">
+                    <a href="/catalog">Все товары</a>
                 </div>
-                <div class="sidebar-link">
-                    <a href="#">Первая категория</a>
-                </div>
-                <div class="sidebar-link">
-                    <a href="#">Вторая категория</a>
-                </div>
+                @php
+                    $categories = \App\Models\Category::getRootCategories();
+                @endphp
+                @foreach($categories as $category)
+                    <div class="sidebar-link">
+                        <a href="/category/{{$category->id}}">{{$category->title}}</a>
+                    </div>
+                    @if($category->hasSubcategories())
+                        @foreach ($category->getSubcategories() as $subcategory)
+                            <div class="sidebar-link-subcategory">
+                                <a href="/category/{{$subcategory->id}}">{{$subcategory->title}}</a>
+                            </div>
+                        @endforeach
+                    @endif
+                @endforeach
                 
             </div>
             <div class="items">
