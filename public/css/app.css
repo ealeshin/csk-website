@@ -325,11 +325,12 @@ section {
   color: #06c;
   text-decoration: underline;
 }
-.items .card-more:hover {
-  color: #D0021B;
-}
 .items .card:hover {
+  cursor: pointer;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.24);
+}
+.items .card:hover .card-more {
+  color: #D0021B;
 }
 
 .catalog {
@@ -343,9 +344,10 @@ section {
 }
 
 .sidebar {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
   background-color: #fff7e1;
-  width: 240px;
   box-sizing: border-box;
   margin-top: 56px;
   margin-right: 25px;
@@ -357,6 +359,10 @@ section {
 }
 .sidebar-link a {
   font-family: "Myriad Pro";
+  color: black;
+}
+.sidebar-link a:hover {
+  text-decoration: none;
 }
 
 .breadcrumbs {
@@ -432,6 +438,25 @@ input:focus {
 
   .ui-links .column {
     margin-right: 0;
+  }
+
+  .catalog {
+    flex-direction: column;
+  }
+
+  .items {
+    justify-content: center;
+  }
+
+  .product-container {
+    width: 100%;
+  }
+  .product-layout {
+    flex-direction: column;
+  }
+
+  h1 {
+    line-height: 1.2;
   }
 }
 @media (max-width: 903px) {

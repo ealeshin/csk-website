@@ -9,3 +9,12 @@ const swiper = new Swiper('.swiper', {
         delay: 5000,
     }
 });
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(el => {
+  el.addEventListener('click', () => {
+    let link = el.querySelector('a');
+    let path = link.getAttribute('href');
+    window.location.replace(path);
+  });
+});
