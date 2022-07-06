@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Category;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -45,7 +46,8 @@ class CategoryCrudController extends CrudController
             ],
             [
                 'name' => 'title',
-                'label' => 'Категория'
+                'label' => 'Категория',
+                'limit' => 144
             ]
         ]);
     }
@@ -61,9 +63,26 @@ class CategoryCrudController extends CrudController
             ],
             [
                 'name' => 'title',
-                'label' => 'Категория'
+                'label' => 'Категория',
+                'limit' => 144
             ]
         ]);
+
+        if (!$this->crud->getCurrentEntry()->parent_id) {
+            CRUD::addColumn([
+                'name' => 'subcategories',
+                'label' => 'Подкатегории',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    $subcategoriesId = Category::where('parent_id', $entry->id)
+                        ->pluck('title', 'id')
+                        ->toArray();
+                    foreach($subcategoriesId as $id => $title) {
+                        echo "<a href='/admin/category/{$id}/show'>{$title}</a><br>";
+                    }
+                }
+            ]);
+        }
 	}
 
     /**
