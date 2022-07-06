@@ -58,11 +58,12 @@
                 <div class="column nm ui-links">
                     <div class="column">
                         <i class="la la-question icon"></i>
-                        Вопрос директору
+                        <a href="/question" class="ui-link">Вопрос директору</a>
                     </div>
-                    <div class="column nm">
+                    <div class="column nm cart-block">
                         <i class="la la-shopping-cart icon"></i>
-                        Корзина [0]
+                        <a href="/cart" class="ui-link">Корзина</a>
+                        <div class="notification">5</div>
                     </div>
                 </div>
             </div>    
