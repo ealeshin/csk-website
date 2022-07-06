@@ -28,18 +28,8 @@ class SlideCrudController extends CrudController
         CRUD::setModel(\App\Models\Slide::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/slide');
         CRUD::setEntityNameStrings('Слайд', 'Слайды');
+        CRUD::orderBy('sort', 'desc');
     }
-
-    protected $columns = [
-        [
-            'name' => 'image',
-            'label' => 'Изображение'
-        ],
-        [
-            'name' => 'sort',
-            'label' => 'Значение для сортировки'
-        ]
-    ];
 
     /**
      * Define what happens when the List operation is loaded.
@@ -49,14 +39,42 @@ class SlideCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::addColumns($this->columns);
+        CRUD::addColumns([
+            [
+                'name' => 'slide_image',
+                'label' => 'Изображение',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    echo "<img src=\"/{$entry->image}\" width=\"400\" height=\"auto\"";
+                    return ' ';
+                }
+            ],
+            [
+                'name' => 'sort',
+                'label' => 'Значение для сортировки'
+            ]
+        ]);
     }
 
 	protected function setupShowOperation()
 	{
 		$this->crud->set('show.setFromDb', false);
 
-        CRUD::addColumns($this->columns);
+        CRUD::addColumns([
+            [
+                'name' => 'slide_image',
+                'label' => 'Изображение',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    echo "<img src=\"/{$entry->image}\" width=\"480\" height=\"auto\"";
+                    return ' ';
+                }
+            ],
+            [
+                'name' => 'sort',
+                'label' => 'Значение для сортировки'
+            ]
+        ]);
 	}
 
     /**
@@ -73,6 +91,7 @@ class SlideCrudController extends CrudController
                 'type' => 'image',
                 'label' => 'Изображение',
                 'max_file_size' => 2097152,
+                'hint' => 'Изображение в формате JPG или PNG размером до 2 Мб'
             ],
             [
                 'name' => 'active',
@@ -85,7 +104,8 @@ class SlideCrudController extends CrudController
                 'type' => 'number',
                 'step' => 100,
                 'label' => 'Значение для сортировки',
-                'default' => 100
+                'default' => 100,
+                'hint' => 'Слайд с максимальным номером будет показан на сайте первым'
             ]
         ]);
     }

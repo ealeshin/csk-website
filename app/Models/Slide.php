@@ -16,7 +16,7 @@ class Slide extends Model
 
     static function getArray()
     {
-        return self::where('active', true)->orderBy('sort')->pluck('image')->toArray();
+        return self::where('active', true)->orderBy('sort', 'desc')->pluck('image')->toArray();
     }
 
     public function setImageAttribute($value)
