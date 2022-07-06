@@ -80,6 +80,7 @@ class CategoryCrudController extends CrudController
                     foreach($subcategoriesId as $id => $title) {
                         echo "<a href='/admin/category/{$id}/show'>{$title}</a><br>";
                     }
+                    return ' ';
                 }
             ]);
         }

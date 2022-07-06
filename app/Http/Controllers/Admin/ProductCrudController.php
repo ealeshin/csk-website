@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Category;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -45,7 +46,8 @@ class ProductCrudController extends CrudController
             ],
             [
                 'name' => 'name',
-                'label' => 'Наименование'
+                'label' => 'Наименование',
+                'limit' => 144
             ]
         ]);
     }
@@ -56,12 +58,63 @@ class ProductCrudController extends CrudController
 
         CRUD::addColumns([
             [
+                'name' => 'category.title',
+                'label' => 'Категория',
+                'limit' => 144
+            ],
+            [
                 'name' => 'code',
                 'label' => 'Артикул'
             ],
             [
+                'name' => 'barcode',
+                'label' => 'Штрихкод'
+            ],
+            [
+                'name' => 'brand',
+                'label' => 'Бренд'
+            ],
+            [
                 'name' => 'name',
-                'label' => 'Наименование'
+                'label' => 'Наименование',
+                'limit' => 144
+            ],
+            [
+                'name' => 'description',
+                'label' => 'Описание',
+                'limit' => 1024
+            ],
+            [
+                'name' => 'price',
+                'label' => 'Цена'
+            ],
+            [
+                'name' => 'in_stock',
+                'label' => 'В наличии',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    return $entry->in_stock ? 'Да' : 'Нет';
+                }
+            ],
+            [
+                'name' => 'active',
+                'label' => 'Показывать на сайте',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    return $entry->active ? 'Да' : 'Нет';
+                }
+            ],
+            [
+                'name' => 'product_images',
+                'label' => 'Изображения',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    $array = $entry->images;
+                    foreach($array as $element) {
+                        echo "<img src=\"{$element['image']}\" width=\"200\" height=\"auto\"><br>";
+                    }
+                    return ' ';
+                }
             ]
         ]);
 	}
@@ -92,9 +145,19 @@ class ProductCrudController extends CrudController
                 'type' => 'number'
             ],
             [
+                'name' => 'brand',
+                'label' => 'Бренд',
+                'type' => 'text'
+            ],
+            [
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text'
+            ],
+            [
+                'name' => 'description',
+                'label' => 'Описание',
+                'type' => 'textarea'
             ],
             [
                 'name' => 'price',
@@ -102,7 +165,8 @@ class ProductCrudController extends CrudController
                 'type' => 'number',
                 'attributes' => [
                     'step' => 0.01
-                ]
+                ],
+                'hint' => 'Цена в формате 123 или 1234,99 (разделитель - запятая)'
             ],
             [
                 'name' => 'in_stock',
@@ -130,6 +194,7 @@ class ProductCrudController extends CrudController
                     ],
                 ],
                 'new_item_label' => 'Добавить изображение',
+                'hint' => 'Формат изображения JPG или PNG. Размер одного изображения - до 2 Мб'
             ],
         ]);
     }
