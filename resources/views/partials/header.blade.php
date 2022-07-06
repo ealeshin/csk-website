@@ -21,7 +21,15 @@
             </div>
             <div class="column nav">
                 <div class="row search-container bp">
-                    <input type="text" class="search-input" placeholder="Поиск">
+                    <input type="text" class="search-input" id="search" placeholder="Поиск">
+                    <div class="search-results">
+                        @php
+                            $results = \App\Models\Product::getSearchResults();
+                        @endphp
+                        @foreach($results as $id => $name)
+                            <div class="search-results-line" data-id="{{$id}}">{{$name}}</div>
+                        @endforeach
+                    </div>
                 </div>
                 <div class="row nav-links">
                     <div class="column">

@@ -23,6 +23,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public static function getSearchResults()
+    {
+        return self::where('active', true)->pluck('name', 'id')->toArray();
+    }
+
     public function getRootCategory()
     {
         return Category::find($this->category->parent_id);
