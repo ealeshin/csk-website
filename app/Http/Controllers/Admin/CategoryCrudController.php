@@ -96,7 +96,11 @@ class CategoryCrudController extends CrudController
         CRUD::addFields([
             [
                 'name' => 'parent_id',
-                'label' => 'Parent category ID'
+                'label' => 'Корневая категория',
+                'hint' => 'Для создания новой корневой категории оставьте это поле пустым',
+                'type' => 'select_from_array',
+                'default' => null,
+                'options' => Category::whereNull('parent_id')->pluck('title', 'id')->toArray()
             ],
             [
                 'name' => 'title',
@@ -110,7 +114,8 @@ class CategoryCrudController extends CrudController
                 'name' => 'active',
                 'label' => 'Показывать на сайте',
                 'type' => 'checkbox',
-                'default' => true
+                'default' => true,
+                'hint' => 'Используйте этот чекбокс, если нужно скрыть на сайте всю категорию полностью'
             ]
         ]);
     }
