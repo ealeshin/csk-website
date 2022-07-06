@@ -63,7 +63,7 @@
                     <div class="column nm cart-block">
                         <i class="la la-shopping-cart icon"></i>
                         <a href="/cart" class="ui-link">Корзина</a>
-                        <div class="notification">5</div>
+                        <div class="notification">1</div>
                     </div>
                 </div>
             </div>    

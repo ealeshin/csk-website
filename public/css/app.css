@@ -307,6 +307,10 @@ section {
   color: white;
   text-decoration: none;
 }
+.product-price-cart a.added-to-cart {
+  background-color: #ccc;
+  color: #666;
+}
 
 .items {
   display: flex;
@@ -457,17 +461,29 @@ input:focus {
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
 }
 
+.input-number {
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #444;
+}
+
 .cart-block {
   position: relative;
 }
 
 .notification {
+  display: none;
   position: absolute;
   top: -8px;
   right: -20px;
   color: white;
   background-color: #D0021B;
-  border-radius: 18px;
+  border-radius: 25px;
   font-size: 13px;
   font-family: "Myriad Pro";
   padding: 3px 7px 0 7px;

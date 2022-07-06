@@ -38,7 +38,8 @@
                         <div class="product-price-block">
                             <div class="product-price-value">{{round($product->price)}} р</div>
                             <div class="product-price-cart">
-                                <a href="#">В корзину</a>
+                                Количество <input type="number" class="input-number" value="1">
+                                <a href="javascript:void(0);" class="cart-button">В корзину</a>
                             </div>
                         </div>
                     </div>

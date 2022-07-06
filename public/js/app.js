@@ -45,3 +45,31 @@ search.addEventListener('input', () => {
     resultsContainer.style.display = 'none';
   }
 });
+
+const cartButton = document.querySelector('.cart-button');
+const notification = document.querySelector('.notification');
+
+cartButton.addEventListener('click', () => {
+  if (!cartButton.classList.contains('added-to-cart')) {
+    fetch('/api/cart/add', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: 14,
+        quantity: 2
+      })
+    }).then((res) => {
+      console.log(res);
+      cartButton.classList.add('added-to-cart');
+      cartButton.innerHTML = 'Добавлено в корзину';
+      notification.style.display = 'block';
+    }).catch((res) => {
+      console.log(res);
+    });
+  } else {
+    return false;
+  }
+});
