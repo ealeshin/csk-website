@@ -82,7 +82,8 @@ class ProductCrudController extends CrudController
             [
                 'name' => 'description',
                 'label' => 'Описание',
-                'limit' => 1024
+                'limit' => 1024,
+                'hint' => 'Описание можно разбить на абзацы и использовать HTML-теги'
             ],
             [
                 'name' => 'price',

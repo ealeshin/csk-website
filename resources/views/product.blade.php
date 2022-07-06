@@ -15,32 +15,42 @@
                 <div class="product-layout">
                     <div class="product-image" style="background-image: url('{{$product->images[0]['image']}}');"></div>
                     <div class="product-info">
-                        <div class="product-info-block">
-                            <div class="product-info-key">Описание</div>
-                            <div class="product-info-value">Описание товара</div>
-                        </div>
+                        @if($product->brand)
                         <div class="product-info-block">
                             <div class="product-info-key">Производитель</div>
-                            <div class="product-info-value">Brandname</div>
+                            <div class="product-info-value">{{$product->brand}}</div>
                         </div>
+                        @endif
+                        @if($product->code)
                         <div class="product-info-block">
                             <div class="product-info-key">Артикул</div>
                             <div class="product-info-value">{{$product->code}}</div>
                         </div>
+                        @endif
+                        @if($product->barcode)
                         <div class="product-info-block">
                             <div class="product-info-key">Штрихкод</div>
                             <div class="product-info-value">{{$product->barcode}}</div>
                         </div>
+                        @endif
+                        @if($product->description)
                         <div class="product-info-block">
-                            <div class="product-info-key">Характеристика</div>
-                            <div class="product-info-value">Значение</div>
+                            <div class="product-info-key">Описание</div>
+                            <div class="product-info-value">{!! nl2br($product->description)!!}</div>
                         </div>
+                        @endif
                         <div class="product-price-block">
-                            <div class="product-price-value">{{round($product->price)}} р</div>
-                            <div class="product-price-cart">
-                                Количество <input type="number" class="input-number" value="1">
-                                <a href="javascript:void(0);" class="cart-button">В корзину</a>
-                            </div>
+                            @if($product->in_stock)
+                                <div class="product-price-value">{{round($product->price)}} р</div>
+                            @else
+                                <div>Временно нет в наличии</div>
+                            @endif
+                            @if($product->in_stock)
+                                <div class="product-price-cart">
+                                    Количество <input type="number" class="input-number" value="1">
+                                    <a href="javascript:void(0);" class="cart-button">В корзину</a>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
