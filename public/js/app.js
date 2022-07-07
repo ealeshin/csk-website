@@ -12,7 +12,8 @@ const swiper = new Swiper('.swiper', {
 
 const notification = document.querySelector('.notification');
 
-if (notification.innerHTML !== '0') {
+let cartTotalCount = ~~(notification.innerHTML);
+if (notification.innerHTML !== 0) {
   notification.style.display = 'block';
 }
 
@@ -73,7 +74,11 @@ cartButton.addEventListener('click', () => {
       console.log(res);
       cartButton.classList.add('added-to-cart');
       cartButton.innerHTML = 'Добавлено в корзину';
-      notification.style.display = 'block';
+      cartTotalCount++;
+      notification.innerHTML = cartTotalCount;
+      if (cartTotalCount === 1) {
+        notification.style.display = 'block';
+      }
     }).catch((res) => {
       console.log(res);
     });
