@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/contacts', [PageController::class, 'contacts']);
 Route::get('/catalog', [PageController::class, 'catalog']);
 Route::get('/product/{id}', [PageController::class, 'product']);
 Route::get('/category/{id}', [PageController::class, 'category']);
+
+Route::get('/session', [CartController::class, 'dump']);
