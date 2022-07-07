@@ -48,6 +48,18 @@ class CategoryCrudController extends CrudController
                 'name' => 'title',
                 'label' => 'Категория',
                 'limit' => 144
+            ],
+            [
+                'name' => 'parent_category',
+                'label' => 'Раздел',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    if ($entry->parent_id) {
+                        $parentCategory = Category::find($entry->parent_id);
+                        echo "<a href=\"/admin/category/{$parentCategory->id}/show\">{$parentCategory->title}</a>";
+                    }
+                    return ' ';
+                }
             ]
         ]);
     }
@@ -80,6 +92,18 @@ class CategoryCrudController extends CrudController
                     foreach($subcategoriesId as $id => $title) {
                         echo "<a href='/admin/category/{$id}/show'>{$title}</a><br>";
                     }
+                    return ' ';
+                }
+            ]);
+        } else {
+            CRUD::addColumn([
+                'name' => 'parent_category',
+                'label' => 'Раздел',
+                'type' => 'closure',
+                'function' => function($entry) {
+                    $id = $entry->parent_id;
+                    $parentCategory = Category::find($id);
+                    echo "<a href=\"/admin/category/{$id}/show\">{$parentCategory->title}</a>";
                     return ' ';
                 }
             ]);
