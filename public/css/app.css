@@ -297,6 +297,9 @@ section {
 .product-price-value {
   font-size: 32px;
 }
+.product-price-note {
+  color: #999;
+}
 .product-price-cart {
   margin-top: 25px;
 }

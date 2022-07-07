@@ -42,13 +42,14 @@
                         <div class="product-price-block">
                             @if($product->in_stock)
                                 <div class="product-price-value">{{round($product->price)}} р</div>
+                                <div class="product-price-note">Цена за 1 шт.</div>
                             @else
                                 <div>Временно нет в наличии</div>
                             @endif
                             @if($product->in_stock)
                                 <div class="product-price-cart">
                                     Количество <input type="number" class="input-number" value="1">
-                                    <a href="javascript:void(0);" class="cart-button">В корзину</a>
+                                    <a href="javascript:void(0);" data-id="{{$product->id}}" class="cart-button">В корзину</a>
                                 </div>
                             @endif
                         </div>

@@ -47,10 +47,13 @@ search.addEventListener('input', () => {
 });
 
 const cartButton = document.querySelector('.cart-button');
+const cartCount = document.querySelector('.input-number');
 const notification = document.querySelector('.notification');
 
 cartButton.addEventListener('click', () => {
   if (!cartButton.classList.contains('added-to-cart')) {
+    let id = cartButton.getAttribute('data-id');
+    let count = cartCount.value;
     fetch('/api/cart/add', {
       method: 'POST',
       headers: {
@@ -58,8 +61,8 @@ cartButton.addEventListener('click', () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        id: 14,
-        quantity: 2
+        id: id,
+        count: count
       })
     }).then((res) => {
       console.log(res);
