@@ -48,8 +48,17 @@
                             @endif
                             @if($product->in_stock)
                                 <div class="product-price-cart">
-                                    Количество <input type="number" class="input-number" value="1">
-                                    <a href="javascript:void(0);" data-id="{{$product->id}}" class="cart-button">В корзину</a>
+                                    Количество
+                                    <input
+                                        type="number"
+                                        class="input-number"
+                                        value="@if($in_cart){{$in_cart}}@else{{1}}@endif"
+                                        @if($in_cart) disabled @endif
+                                    >
+                                    <a href="javascript:void(0);" data-id="{{$product->id}}"
+                                        class="cart-button @if($in_cart){{'added-to-cart'}}@endif">
+                                        @if($in_cart) Добавлено в корзину @else В корзину @endif
+                                    </a>
                                 </div>
                             @endif
                         </div>
