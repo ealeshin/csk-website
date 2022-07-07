@@ -28,7 +28,7 @@ class CartController extends Controller
         return $count;
     }
 
-    public function get(Request $request)
+    public static function getCartArray(Request $request)
     {
         $data = $request->session()->all();
         $cart = [];
@@ -38,10 +38,7 @@ class CartController extends Controller
                 $cart[$id] = $value;
             }
         }
-        return response()->json([
-            'success' => true,
-            'data' => $cart
-        ], 200);
+        return $cart;
     }
 
     public function dump(Request $request)
