@@ -311,6 +311,7 @@ section {
   text-decoration: none;
 }
 .product-price-cart a.added-to-cart {
+  cursor: default;
   background-color: #ccc;
   color: #666;
 }
