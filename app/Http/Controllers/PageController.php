@@ -15,6 +15,21 @@ class PageController extends Controller
         ]);
     }
 
+    public function cart(Request $request)
+    {
+        $items = [];
+        $cart = CartController::getCartArray($request);
+        foreach ($cart as $id => $count) {
+            array_push($items, [
+                'product' => Product::find($id) ?? null,
+                'count' => $count
+            ]);
+        }
+        return view('cart', [
+            'items' => $items
+        ]);
+    }
+
     public function contacts()
     {
         return view('contacts');
