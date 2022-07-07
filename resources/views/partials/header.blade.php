@@ -63,7 +63,9 @@
                     <div class="column nm cart-block">
                         <i class="la la-shopping-cart icon"></i>
                         <a href="/cart" class="ui-link">Корзина</a>
-                        <div class="notification">1</div>
+                        <div class="notification">
+                            {{\App\Http\Controllers\CartController::getCartCounter(request())}}
+                        </div>
                     </div>
                 </div>
             </div>    

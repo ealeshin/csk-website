@@ -10,6 +10,12 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
+const notification = document.querySelector('.notification');
+
+if (notification.innerHTML !== '0') {
+  notification.style.display = 'block';
+}
+
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(el => {
@@ -48,7 +54,6 @@ search.addEventListener('input', () => {
 
 const cartButton = document.querySelector('.cart-button');
 const cartCount = document.querySelector('.input-number');
-const notification = document.querySelector('.notification');
 
 cartButton.addEventListener('click', () => {
   if (!cartButton.classList.contains('added-to-cart')) {
