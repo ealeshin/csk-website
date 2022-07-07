@@ -52,13 +52,14 @@ class PageController extends Controller
         ]);
     }
 
-    public function product($id)
+    public function product(Request $request, $id)
     {
         $product = Product::find($id);
         return view('product', [
             'product' => $product,
             'category' => $product->getRootCategory(),
-            'subcategory' => $product->category
+            'subcategory' => $product->category,
+            'in_cart' => CartController::isProductIdAdded($request, $id)
         ]);
     }
 }

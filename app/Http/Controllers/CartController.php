@@ -41,6 +41,19 @@ class CartController extends Controller
         return $cart;
     }
 
+    public static function isProductIdAdded(Request $request, $id)
+    {
+        $result = null;
+        $cart = self::getCartArray($request);
+        foreach ($cart as $product_id => $count) {
+            if ($product_id == $id) {
+                $result = $count;
+                break;
+            }
+        }
+        return $result;
+    }
+
     public function dump(Request $request)
     {
         $data = $request->session()->all();
