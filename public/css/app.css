@@ -58,6 +58,11 @@
   font-weight: normal;
   src: local("Myriad Pro Bold Condensed Italic"), url("fonts/myriad-pro/MYRIADPRO-BOLDCONDIT.woff") format("woff");
 }
+body {
+  margin: 0;
+  font-family: "Myriad Pro Semibold", sans-serif;
+}
+
 .brand-color {
   color: #D0021B;
 }
@@ -69,9 +74,12 @@ a.ui-link {
   color: black;
 }
 
-body {
-  margin: 0;
-  font-family: "Myriad Pro Semibold", sans-serif;
+a.button {
+  padding: 13px 36px 12px 36px;
+  border-radius: 8px;
+  background-color: #06c;
+  color: white;
+  text-decoration: none;
 }
 
 h1 {
@@ -307,13 +315,6 @@ section {
 .product-price-cart {
   margin-top: 25px;
 }
-.product-price-cart a {
-  padding: 13px 36px 12px 36px;
-  border-radius: 8px;
-  background-color: #06c;
-  color: white;
-  text-decoration: none;
-}
 .product-price-cart a.added-to-cart {
   cursor: default;
   background-color: #ccc;
@@ -513,6 +514,9 @@ input:focus {
 .cart-block-column {
   width: 144px;
 }
+.cart-block-column.order-button-column {
+  width: auto;
+}
 .cart-block-title {
   font-family: "Myriad Pro";
   margin-bottom: 6px;
@@ -534,6 +538,9 @@ input:focus {
   width: 128px;
   height: 128px;
   background-size: contain;
+}
+.cart-image-blank {
+  height: 64px;
 }
 
 .notification {

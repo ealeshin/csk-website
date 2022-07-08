@@ -56,7 +56,7 @@
                                         @if($in_cart) disabled @endif
                                     >
                                     <a href="javascript:void(0);" data-id="{{$product->id}}"
-                                        class="cart-button @if($in_cart){{'added-to-cart'}}@endif">
+                                        class="button cart-button @if($in_cart){{'added-to-cart'}}@endif">
                                         @if($in_cart) Добавлено в корзину @else В корзину @endif
                                     </a>
                                 </div>
