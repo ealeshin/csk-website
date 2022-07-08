@@ -8,12 +8,12 @@ class CartController extends Controller
 {
     public function add(Request $request)
     {
-        $this->update('add', $request);
+        return $this->update('add', $request);
     }
 
     public function delete(Request $request)
     {
-        $this->update('delete', $request);
+        return $this->update('delete', $request);
     }
 
     public static function getCartCounter(Request $request)
