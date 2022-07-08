@@ -54,9 +54,9 @@ search.addEventListener('input', () => {
 });
 
 const cartButton = document.querySelector('.cart-button');
+const cartCount = document.querySelector('.input-number');
 
 if (cartButton) {
-  const cartCount = document.querySelector('.input-number');
   cartButton.addEventListener('click', () => {
     if (!cartButton.classList.contains('added-to-cart')) {
       let id = cartButton.getAttribute('data-id');
@@ -74,6 +74,7 @@ if (cartButton) {
       }).then((res) => {
         console.log(res);
         cartButton.classList.add('added-to-cart');
+        cartCount.setAttribute('disabled', 'disabled');
         cartButton.innerHTML = 'Добавлено в корзину';
         cartTotalCount++;
         notification.innerHTML = cartTotalCount;
@@ -86,5 +87,29 @@ if (cartButton) {
     } else {
       return false;
     }
+  });
+}
+
+const deleteFromCartButtons = document.querySelectorAll('.delete-from-cart');
+if (deleteFromCartButtons.length > 0) {
+  deleteFromCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      let id = button.getAttribute('data-id');
+      fetch('/api/cart/delete', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id: id})
+      })
+      .then(response => {
+        let block = document.querySelector('[data-cart-id="' + id + '"]');
+        block.remove();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    });
   });
 }
