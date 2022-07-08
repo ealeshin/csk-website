@@ -13,7 +13,7 @@ const swiper = new Swiper('.swiper', {
 const notification = document.querySelector('.notification');
 
 let cartTotalCount = ~~(notification.innerHTML);
-if (notification.innerHTML !== 0) {
+if (cartTotalCount !== 0) {
   notification.style.display = 'block';
 }
 
@@ -54,35 +54,37 @@ search.addEventListener('input', () => {
 });
 
 const cartButton = document.querySelector('.cart-button');
-const cartCount = document.querySelector('.input-number');
 
-cartButton.addEventListener('click', () => {
-  if (!cartButton.classList.contains('added-to-cart')) {
-    let id = cartButton.getAttribute('data-id');
-    let count = cartCount.value;
-    fetch('/api/cart/add', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        id: id,
-        count: count
-      })
-    }).then((res) => {
-      console.log(res);
-      cartButton.classList.add('added-to-cart');
-      cartButton.innerHTML = 'Добавлено в корзину';
-      cartTotalCount++;
-      notification.innerHTML = cartTotalCount;
-      if (cartTotalCount === 1) {
-        notification.style.display = 'block';
-      }
-    }).catch((res) => {
-      console.log(res);
-    });
-  } else {
-    return false;
-  }
-});
+if (cartButton) {
+  const cartCount = document.querySelector('.input-number');
+  cartButton.addEventListener('click', () => {
+    if (!cartButton.classList.contains('added-to-cart')) {
+      let id = cartButton.getAttribute('data-id');
+      let count = cartCount.value;
+      fetch('/api/cart/add', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id: id,
+          count: count
+        })
+      }).then((res) => {
+        console.log(res);
+        cartButton.classList.add('added-to-cart');
+        cartButton.innerHTML = 'Добавлено в корзину';
+        cartTotalCount++;
+        notification.innerHTML = cartTotalCount;
+        if (cartTotalCount === 1) {
+          notification.style.display = 'block';
+        }
+      }).catch((res) => {
+        console.log(res);
+      });
+    } else {
+      return false;
+    }
+  });
+}
