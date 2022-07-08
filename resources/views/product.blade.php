@@ -41,7 +41,7 @@
                         @endif
                         <div class="product-price-block">
                             @if($product->in_stock)
-                                <div class="product-price-value">{{round($product->price)}} р</div>
+                                <div class="product-price-value">{{number_format($product->price, 2, ',', ' ')}} р</div>
                                 <div class="product-price-note">Цена за 1 шт.</div>
                             @else
                                 <div>Временно нет в наличии</div>

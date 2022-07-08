@@ -243,6 +243,10 @@ section {
   background-image: linear-gradient(45deg, #f5f7fa, #c3cfe2);
 }
 
+#cart {
+  background-image: linear-gradient(to top, #fbd999, beige);
+}
+
 .map {
   margin-right: 50px;
 }
@@ -478,6 +482,55 @@ input:focus {
 
 .cart-block {
   position: relative;
+}
+
+.delete-from-cart {
+  color: #999;
+}
+.delete-from-cart:hover {
+  color: #D0021B;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1280px;
+  box-sizing: border-box;
+  padding: 32px 0 50px 0;
+}
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+.cart-block-column {
+  width: 144px;
+}
+.cart-block-title {
+  font-family: "Myriad Pro";
+  margin-bottom: 4px;
+  color: #999;
+}
+.cart-block-value {
+  font-family: "Myriad Pro";
+  font-size: 24px;
+}
+.cart-block-value.product-name {
+  font-size: 16px;
+  padding-right: 16px;
+}
+.cart-product {
+  width: 400px;
+}
+.cart-image {
+  margin: 0 25px;
+  width: 128px;
+  height: 128px;
+  background-size: contain;
 }
 
 .notification {
