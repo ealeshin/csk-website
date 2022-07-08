@@ -106,6 +106,11 @@ if (deleteFromCartButtons.length > 0) {
       .then(response => {
         let block = document.querySelector('[data-cart-id="' + id + '"]');
         block.remove();
+        cartTotalCount--;
+        notification.innerHTML = cartTotalCount;
+        if (cartTotalCount === 0) {
+          notification.style.display = 'none';
+        }
       })
       .catch((error) => {
         console.log(error);
