@@ -497,22 +497,25 @@ input:focus {
   justify-content: flex-start;
   width: 1280px;
   box-sizing: border-box;
-  padding: 32px 0 50px 0;
+  margin: 32px 0 50px 0;
+  background-color: white;
+  border-radius: 16px;
 }
 .cart-item {
   display: flex;
   flex-direction: row;
-  background-color: white;
   padding: 16px;
-  border-radius: 16px;
-  margin-bottom: 25px;
+  border-top: 1px dashed #999;
+}
+.cart-item:first-child {
+  border-top: none;
 }
 .cart-block-column {
   width: 144px;
 }
 .cart-block-title {
   font-family: "Myriad Pro";
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: #999;
 }
 .cart-block-value {
