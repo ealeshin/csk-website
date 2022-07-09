@@ -19,10 +19,18 @@ const calculateCartResult = () => {
   let result = 0;
   const resultHolder = document.querySelector('.result');
   const sumHolders = document.querySelectorAll('.sum');
+  const cartResultBlock = document.querySelector('.cart-result');
+  const emptyCartMessage = document.querySelector('.empty-cart-message');
+
   sumHolders.forEach(sumHolder => {
     result += ~~(sumHolder.innerHTML.trim().replace(' ', '').replace(',', '.'));
   });
-  resultHolder.innerHTML = formatPrice(result);
+  if (result == 0) {
+    cartResultBlock.style.display = 'none';
+    emptyCartMessage.style.display = 'block';
+  } else {
+    resultHolder.innerHTML = formatPrice(result);
+  }
 };
 
 const notification = document.querySelector('.notification');

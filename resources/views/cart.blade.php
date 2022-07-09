@@ -1,6 +1,7 @@
 @include('partials.header')
     <section id="cart">
         <div class="cart">
+            <h3 class="empty-cart-message" @if(count($items) == 0) style="display: block;" @endif>Корзина пуста</h3>
             @php $total = 0; @endphp
             @foreach($items as $item)
             <div class="cart-item" data-cart-id="{{$item['product']->id}}">
@@ -43,23 +44,25 @@
                 </div>
             </div>
             @endforeach
-            <div class="cart-item cart-result">
-                <div class="cart-image cart-image-blank"></div>
-                <div class="cart-product">
+            @if(count($items) > 0)
+                <div class="cart-item cart-result">
+                    <div class="cart-image cart-image-blank"></div>
+                    <div class="cart-product">
+                    </div>
+                    <div class="cart-block-column">
+                    </div>
+                    <div class="cart-block-column">
+                    </div>
+                    <div class="cart-block-column">
+                        <div class="cart-block-title">Итого</div>
+                        <div class="cart-block-value result">{{number_format($total, 2, ',', ' ')}}</div>
+                    </div>
+                    <div class="cart-block-column order-button-column">
+                        <div class="cart-block-title">&nbsp;</div>
+                        <a href="javascript:void();" class="button">Оформить заказ</a>
+                    </div>
                 </div>
-                <div class="cart-block-column">
-                </div>
-                <div class="cart-block-column">
-                </div>
-                <div class="cart-block-column">
-                    <div class="cart-block-title">Итого</div>
-                    <div class="cart-block-value result">{{number_format($total, 2, ',', ' ')}}</div>
-                </div>
-                <div class="cart-block-column order-button-column">
-                    <div class="cart-block-title">&nbsp;</div>
-                    <a href="javascript:void();" class="button">Оформить заказ</a>
-                </div>
-            </div>
+            @endif
         </div>
     </section>
 </body>

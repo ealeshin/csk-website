@@ -502,13 +502,19 @@ input:focus {
   background-color: white;
   border-radius: 16px;
 }
+.cart > h3 {
+  margin: 100px auto;
+  font-weight: normal;
+  font-size: 32px;
+  color: #999;
+}
 .cart-item {
   display: flex;
   flex-direction: row;
   padding: 16px;
   border-top: 1px dashed #999;
 }
-.cart-item:first-child {
+.cart-item:first-of-type {
   border-top: none;
 }
 .cart-block-column {
@@ -541,6 +547,10 @@ input:focus {
 }
 .cart-image-blank {
   height: 64px;
+}
+
+.empty-cart-message {
+  display: none;
 }
 
 .notification {
