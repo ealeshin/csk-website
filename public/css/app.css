@@ -492,6 +492,51 @@ input:focus {
   color: #D0021B;
 }
 
+.shield {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 25px;
+  border-radius: 16px;
+  width: 400px;
+  height: auto;
+  box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
+  font-family: "Myriad Pro";
+}
+.modal > input {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+.modal > input::placeholder {
+  color: #bbb;
+}
+.modal-block {
+  text-align: center;
+  margin: 16px 0;
+}
+.modal-success {
+  display: none;
+  font-size: 21px;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
