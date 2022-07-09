@@ -59,11 +59,12 @@
                     </div>
                     <div class="cart-block-column order-button-column">
                         <div class="cart-block-title">&nbsp;</div>
-                        <a href="javascript:void();" class="button">Оформить заказ</a>
+                        <a href="javascript:void();" class="button order-button">Оформить заказ</a>
                     </div>
                 </div>
             @endif
         </div>
     </section>
+    @include('modal')
 </body>
 </html>

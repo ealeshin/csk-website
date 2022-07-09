@@ -142,3 +142,15 @@ if (deleteFromCartButtons.length > 0) {
     });
   });
 }
+
+const orderButton = document.querySelector('.order-button');
+const modal = document.querySelector('.shield');
+orderButton.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+modal.addEventListener('click', (event) => {
+  event.stopPropagation();
+  if (event.target.classList.contains('shield')) {
+    modal.style.display = 'none';
+  }
+});
