@@ -145,12 +145,34 @@ if (deleteFromCartButtons.length > 0) {
 
 const orderButton = document.querySelector('.order-button');
 const modal = document.querySelector('.shield');
-orderButton.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
-modal.addEventListener('click', (event) => {
-  event.stopPropagation();
-  if (event.target.classList.contains('shield')) {
-    modal.style.display = 'none';
-  }
-});
+const orderForm = document.querySelector('.modal-form');
+const orderFormSuccess = document.querySelector('.modal-success');
+const sendButton = document.querySelector('.send-order');
+
+if (orderButton) {
+  orderButton.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+}
+
+if (sendButton) {
+  sendButton.addEventListener('click', () => {
+    orderForm.style.display = 'none';
+    orderFormSuccess.style.display = 'flex';
+  });
+}
+
+if (modal) {
+  modal.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (event.target.classList.contains('shield')) {
+      modal.style.display = 'none';
+    }
+  });
+  document.addEventListener('keyup', (event) => {
+    if (event.key == 'Escape') {
+      modal.style.display = 'none';
+    }
+  });
+}
+

@@ -5,7 +5,7 @@
         <input type="text" placeholder="Телефон">
         <input type="text" placeholder="E-mail">
         <div class="modal-block">
-            <a href="javascript:void(0);" class="button">Отправить</a>
+            <a href="javascript:void(0);" class="button send-order">Отправить</a>
         </div>
     </div>
     <div class="modal modal-success">
