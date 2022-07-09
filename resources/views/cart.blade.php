@@ -24,7 +24,7 @@
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Сумма</div>
-                    <div class="cart-block-value">
+                    <div class="cart-block-value sum">
                         @php
                             $sum = $item['count'] * $item['product']->price;
                             $total += $sum;
@@ -53,7 +53,7 @@
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Итого</div>
-                    <div class="cart-block-value">{{number_format($total, 2, ',', ' ')}}</div>
+                    <div class="cart-block-value result">{{number_format($total, 2, ',', ' ')}}</div>
                 </div>
                 <div class="cart-block-column order-button-column">
                     <div class="cart-block-title">&nbsp;</div>

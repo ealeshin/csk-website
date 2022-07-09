@@ -10,6 +10,21 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
+const formatPrice = (value) => {
+  let result = Number(value).toFixed(2);
+  return result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ").replace('.', ','); 
+};
+
+const calculateCartResult = () => {
+  let result = 0;
+  const resultHolder = document.querySelector('.result');
+  const sumHolders = document.querySelectorAll('.sum');
+  sumHolders.forEach(sumHolder => {
+    result += ~~(sumHolder.innerHTML.trim().replace(' ', '').replace(',', '.'));
+  });
+  resultHolder.innerHTML = formatPrice(result);
+};
+
 const notification = document.querySelector('.notification');
 
 let cartTotalCount = ~~(notification.innerHTML);
@@ -111,6 +126,7 @@ if (deleteFromCartButtons.length > 0) {
         if (cartTotalCount === 0) {
           notification.style.display = 'none';
         }
+        calculateCartResult();
       })
       .catch((error) => {
         console.log(error);
