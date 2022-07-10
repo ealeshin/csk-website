@@ -18,7 +18,7 @@
             <h1 class="alt-heading">Наши партнёры</h1>
             @foreach ($partners as $partner)
                 <a href="{{$partner->link}}" target="_blank">
-                    <img src="{{$partner->image}}" width="248" alt="{{$partner->name}}">
+                    <img class="partner-logo" src="{{$partner->image}}" alt="{{$partner->name}}">
                 </a>
             @endforeach
         </div>

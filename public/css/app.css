@@ -92,6 +92,11 @@ p {
   margin-bottom: 25px;
 }
 
+.partner-logo {
+  width: 248px;
+  height: auto;
+}
+
 a.button {
   font-family: "Myriad Pro";
   padding: 13px 36px 12px 36px;
