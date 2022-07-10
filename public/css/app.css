@@ -254,6 +254,7 @@ section {
 
 #cart {
   background-image: linear-gradient(to top, #fbd999, beige);
+  min-height: 70vh;
 }
 
 .map {
