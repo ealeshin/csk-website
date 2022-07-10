@@ -35,6 +35,11 @@ class PageController extends Controller
         return view('contacts');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
     public function catalog()
     {
         return view('catalog', [

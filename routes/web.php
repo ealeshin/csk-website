@@ -17,6 +17,7 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [PageController::class, 'index']);
 Route::get('/contacts', [PageController::class, 'contacts']);
+Route::get('/about', [PageController::class, 'about']);
 Route::get('/catalog', [PageController::class, 'catalog']);
 Route::get('/product/{id}', [PageController::class, 'product']);
 Route::get('/category/{id}', [PageController::class, 'category']);
