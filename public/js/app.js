@@ -146,12 +146,27 @@ if (deleteFromCartButtons.length > 0) {
 const orderButton = document.querySelector('.order-button');
 const modal = document.querySelector('.shield');
 const orderForm = document.querySelector('.modal-form');
+const questionForm = document.querySelector('.modal-question');
 const orderFormSuccess = document.querySelector('.modal-success');
 const sendButton = document.querySelector('.send-order');
+const reload = document.querySelector('.reload');
+const questionLink = document.querySelector('.question-link');
+
+questionLink.addEventListener('click', () => {
+  questionForm.style.display = 'flex';
+  modal.style.display = 'flex';
+});
+
+if (reload) {
+  reload.addEventListener('click', () => {
+    window.location.reload();
+  });
+}
 
 if (orderButton) {
   orderButton.addEventListener('click', () => {
     modal.style.display = 'flex';
+    orderForm.style.display = 'flex';
   });
 }
 
@@ -167,11 +182,8 @@ if (modal) {
     event.stopPropagation();
     if (event.target.classList.contains('shield')) {
       modal.style.display = 'none';
-    }
-  });
-  document.addEventListener('keyup', (event) => {
-    if (event.key == 'Escape') {
-      modal.style.display = 'none';
+      orderForm.style.display = 'none';
+      questionForm.style.display = 'none';
     }
   });
 }

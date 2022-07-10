@@ -448,6 +448,18 @@ section {
   width: 128px;
 }
 
+textarea {
+  font-family: "Myriad Pro";
+  font-size: 16px;
+  width: 100%;
+  height: 100px;
+  border: 1px #bbb solid;
+  border-radius: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
 input:focus {
   outline: none;
 }
@@ -533,8 +545,13 @@ input:focus {
   text-align: center;
   margin: 16px 0;
 }
-.modal-success {
+.modal-block.heading {
+  font-size: 24px;
+}
+.modal-form, .modal-question, .modal-success {
   display: none;
+}
+.modal-success {
   font-size: 21px;
 }
 
