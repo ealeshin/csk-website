@@ -13,4 +13,5 @@
         </div>
     </section>
 </body>
+@include('partials.footer')
 </html>

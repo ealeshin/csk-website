@@ -629,6 +629,17 @@ input:focus {
   padding: 3px 7px 0 7px;
 }
 
+footer {
+  display: flex;
+  width: 100vw;
+  height: 128px;
+  justify-content: center;
+  align-items: center;
+  background-color: #292e34;
+  color: #bbb;
+  font-family: "Myriad Pro";
+}
+
 @media (max-width: 1216px) {
   .ui-links .column {
     margin-top: 12px;
