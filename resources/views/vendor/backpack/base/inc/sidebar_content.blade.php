@@ -12,6 +12,9 @@
         <a class="nav-link" href="{{ backpack_url('slide') }}">
             <i class="la la-photo nav-icon"></i> Слайдер
         </a>
+        <a class="nav-link" href="{{ backpack_url('partner') }}">
+            <i class="la la-user nav-icon"></i> Партнёры
+        </a>
         <a class="nav-link" href="{{ backpack_url('content') }}">
             <i class="la la-info nav-icon"></i> О компании
         </a>
