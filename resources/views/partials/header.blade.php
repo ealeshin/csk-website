@@ -58,7 +58,7 @@
                 <div class="column nm ui-links">
                     <div class="column">
                         <i class="la la-question icon"></i>
-                        <a href="/question" class="ui-link">Вопрос директору</a>
+                        <a href="javascript:void(0);" class="ui-link question-link">Вопрос директору</a>
                     </div>
                     <div class="column nm cart-block">
                         <i class="la la-shopping-cart icon"></i>
