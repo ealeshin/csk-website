@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Content;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -37,7 +38,9 @@ class PageController extends Controller
 
     public function about()
     {
-        return view('about');
+        return view('about', [
+            'content' => Content::where('page', 'about')->first()
+        ]);
     }
 
     public function catalog()
