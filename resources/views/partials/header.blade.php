@@ -12,6 +12,7 @@
     <script defer src="/js/app.js?{{ time() }}"></script>
 </head>
 <body>
+    @include('modal')
     <header>
         <div class="column">
             <div class="column logo-container">

@@ -65,6 +65,5 @@
             @endif
         </div>
     </section>
-    @include('modal')
 </body>
 </html>
