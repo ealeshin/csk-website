@@ -83,6 +83,15 @@ p {
   margin: 50px auto;
 }
 
+.centered {
+  text-align: center;
+}
+
+.alt-heading {
+  color: #999;
+  margin-bottom: 25px;
+}
+
 a.button {
   font-family: "Myriad Pro";
   padding: 13px 36px 12px 36px;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Content;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,7 +13,8 @@ class PageController extends Controller
     public function index()
     {
         return view('index', [
-            'products' => Product::getPopular()
+            'products' => Product::getPopular(),
+            'partners' => Partner::all()
         ]);
     }
 
