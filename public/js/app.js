@@ -60,18 +60,25 @@ results.forEach(el => {
   });
 });
 
+let count = 0;
+let limit = 10;
+
 search.addEventListener('input', () => {
   if (search.value.trim() !== '' && search.value.length > 1) {
     results.forEach(result => {
       let position = result.innerHTML.toLowerCase().indexOf(search.value.toLowerCase());
       if (position !== -1) {
-        resultsContainer.style.display = 'block';
-        result.style.display = 'block';
+        count++;
+        if (count <= limit) {
+          resultsContainer.style.display = 'block';
+          result.style.display = 'block';
+        }
       } else {
         result.style.display = 'none';
       }
     });
   } else {
+    count = 0;
     resultsContainer.style.display = 'none';
   }
 });
