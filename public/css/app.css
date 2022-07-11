@@ -412,6 +412,9 @@ section {
 .items .card:hover .card-more {
   color: #D0021B;
 }
+.items-heading {
+  width: 100%;
+}
 
 .catalog {
   display: flex;
