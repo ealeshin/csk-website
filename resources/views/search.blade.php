@@ -1,6 +1,6 @@
 @include('partials.header')
 <section id="mp-catalog">    
-    <div class="items">
+    <div class="items mh">
         <div class="items-heading">
             @if($count > 0)
                 <h3>Найдено товаров: {{$count}}</h3>

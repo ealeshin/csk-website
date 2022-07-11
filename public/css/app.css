@@ -416,6 +416,10 @@ section {
   width: 100%;
 }
 
+.mh {
+  min-height: 70vh;
+}
+
 .catalog {
   display: flex;
   flex-wrap: wrap;
