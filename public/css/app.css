@@ -699,4 +699,35 @@ footer {
     width: 90vw;
     height: 400px;
   }
+
+  .items {
+    width: 100vw;
+  }
+  .items .category {
+    width: 90vw;
+    margin-right: 0;
+    margin-top: 25px;
+  }
+  .items .card {
+    width: 90vw;
+    margin: 12px auto;
+  }
+
+  .swiper {
+    height: 25vh;
+    background-color: #f5f7fa;
+  }
+  .swiper-slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+  }
+
+  .search-input {
+    width: 82vw;
+  }
+
+  footer p {
+    max-width: 80vw;
+  }
 }
