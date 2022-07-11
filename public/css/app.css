@@ -488,6 +488,7 @@ input:focus {
 }
 
 .shield {
+  z-index: 20;
   display: none;
   justify-content: center;
   align-items: center;
@@ -500,6 +501,7 @@ input:focus {
 }
 
 .modal {
+  z-index: 21;
   display: flex;
   background-color: white;
   flex-direction: column;
