@@ -20,10 +20,12 @@ class PageController extends Controller
 
     public function search($q)
     {
-        $products = Product::where('name', 'like', '%'.$q.'%')->get();
+        $query = trim($q);
+        $products = Product::where('name', 'like', '%'.$query.'%')->get();
         return view('search', [
             'products' => $products,
-            'count' => $products->count()
+            'count' => $products->count(),
+            'query' => $query
         ]);
     }
 

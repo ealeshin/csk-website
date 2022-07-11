@@ -22,7 +22,8 @@
             </div>
             <div class="column nav">
                 <div class="row search-container bp">
-                    <input type="text" class="search-input" id="search" placeholder="Поиск">
+                    <input type="text" class="search-input" id="search" 
+                        placeholder="Поиск" @isset($query) value="{{$query}}" @endisset>
                     <div class="search-results">
                         @php
                             $results = \App\Models\Product::getSearchResults();
