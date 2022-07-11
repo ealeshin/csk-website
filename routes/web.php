@@ -21,6 +21,7 @@ Route::get('/about', [PageController::class, 'about']);
 Route::get('/catalog', [PageController::class, 'catalog']);
 Route::get('/product/{id}', [PageController::class, 'product']);
 Route::get('/category/{id}', [PageController::class, 'category']);
+Route::get('/search/{q}', [PageController::class, 'search']);
 Route::get('/cart', [PageController::class, 'cart']);
 
 Route::get('/session', [CartController::class, 'dump']);

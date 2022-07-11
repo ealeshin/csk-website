@@ -76,6 +76,13 @@ search.addEventListener('input', () => {
   }
 });
 
+search.addEventListener('keyup', (event) => {
+  let query = search.value.trim();
+  if (query.length > 1 && event.key == 'Enter') {
+    window.location.replace('/search/' + query);
+  }
+});
+
 const cartButton = document.querySelector('.cart-button');
 const cartCount = document.querySelector('.input-number');
 

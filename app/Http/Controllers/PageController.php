@@ -18,6 +18,15 @@ class PageController extends Controller
         ]);
     }
 
+    public function search($q)
+    {
+        $products = Product::where('name', 'like', '%'.$q.'%')->get();
+        return view('search', [
+            'products' => $products,
+            'count' => $products->count()
+        ]);
+    }
+
     public function cart(Request $request)
     {
         $items = [];
