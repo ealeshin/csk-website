@@ -844,4 +844,14 @@ footer {
   .items-heading {
     padding: 0 16px;
   }
+
+  .catalog .sidebar {
+    width: 90vw;
+    max-width: 90vw;
+    margin: 25px auto;
+    box-sizing: border-box;
+  }
+  .catalog .items {
+    width: 100vw;
+  }
 }
