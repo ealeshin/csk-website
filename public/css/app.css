@@ -835,4 +835,9 @@ footer {
     text-decoration: none;
     padding-bottom: 4px;
   }
+
+  .text-container {
+    width: 100%;
+    padding: 16px;
+  }
 }
