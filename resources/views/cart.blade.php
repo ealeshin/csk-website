@@ -40,6 +40,8 @@
                                 class="delete-from-cart" title="Убрать из корзины">
                             <i class="la la-trash-alt nav-icon"></i>
                         </a>
+                        <a href="javascript:void(0);" data-id="{{$item['product']->id}}"
+                            class="delete-from-cart mobile-cart-hint">Убрать из корзины</a>
                     </div>
                 </div>
             </div>
