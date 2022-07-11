@@ -740,6 +740,9 @@ footer {
   .items .product-info-key, .items .product-info-value {
     width: 100%;
   }
+  .items .product-info-value {
+    margin-top: 4px;
+  }
   .items .product-price-block {
     flex-wrap: wrap;
     width: 82vw;
