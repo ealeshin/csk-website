@@ -5,40 +5,10 @@
   src: local("Myriad Pro Regular"), url("fonts/myriad-pro/MYRIADPRO-REGULAR.woff") format("woff");
 }
 @font-face {
-  font-family: "Myriad Pro Condensed";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Condensed"), url("fonts/myriad-pro/MYRIADPRO-COND.woff") format("woff");
-}
-@font-face {
-  font-family: "Myriad Pro Condensed Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Condensed Italic"), url("fonts/myriad-pro/MYRIADPRO-CONDIT.woff") format("woff");
-}
-@font-face {
-  font-family: "Myriad Pro Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Light"), url("fonts/myriad-pro/MyriadPro-Light.woff") format("woff");
-}
-@font-face {
   font-family: "Myriad Pro Semibold";
   font-style: normal;
   font-weight: normal;
   src: local("Myriad Pro Semibold"), url("fonts/myriad-pro/MYRIADPRO-SEMIBOLD.woff") format("woff");
-}
-@font-face {
-  font-family: "Myriad Pro Semibold Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Semibold Italic"), url("fonts/myriad-pro/MYRIADPRO-SEMIBOLDIT.woff") format("woff");
-}
-@font-face {
-  font-family: "Myriad Pro Bold Condensed";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Bold Condensed"), url("fonts/myriad-pro/MYRIADPRO-BOLDCOND.woff") format("woff");
 }
 @font-face {
   font-family: "Myriad Pro Bold";
@@ -46,21 +16,9 @@
   font-weight: normal;
   src: local("Myriad Pro Bold"), url("fonts/myriad-pro/MYRIADPRO-BOLD.woff") format("woff");
 }
-@font-face {
-  font-family: "Myriad Pro Bold Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Bold Italic"), url("fonts/myriad-pro/MYRIADPRO-BOLDIT.woff") format("woff");
-}
-@font-face {
-  font-family: "Myriad Pro Bold Condensed Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Bold Condensed Italic"), url("fonts/myriad-pro/MYRIADPRO-BOLDCONDIT.woff") format("woff");
-}
 body {
   margin: 0;
-  font-family: "Myriad Pro Semibold", sans-serif;
+  font-family: "Myriad Pro", sans-serif;
 }
 
 .brand-color {
@@ -72,10 +30,6 @@ a {
 }
 a.ui-link {
   color: black;
-}
-
-p {
-  font-family: "Myriad Pro";
 }
 
 .text-container {
@@ -98,7 +52,6 @@ p {
 }
 
 a.button {
-  font-family: "Myriad Pro";
   padding: 13px 36px 12px 36px;
   border-radius: 8px;
   background-color: #06c;
@@ -124,7 +77,6 @@ h2 {
 .contacts p {
   margin: 0;
   line-height: 1.4;
-  font-family: "Myriad Pro";
   font-weight: normal;
 }
 .contacts-block {
@@ -205,7 +157,6 @@ header {
   display: none;
   cursor: pointer;
   color: black;
-  font-family: "Myriad Pro";
   padding: 8px 12px;
   border-bottom: 1px dotted #ccc;
 }
@@ -314,7 +265,6 @@ section {
   margin-right: 64px;
 }
 .product-info {
-  font-family: "Myriad Pro";
   width: auto;
   padding: 25px 0;
 }
@@ -367,7 +317,6 @@ section {
 }
 .items .category a {
   display: inline-block;
-  font-family: "Myriad Pro";
   color: #06c;
   text-decoration: underline;
   margin-bottom: 12px;
@@ -401,7 +350,6 @@ section {
   height: 57px;
 }
 .items .card-more {
-  font-family: "Myriad Pro";
   color: #06c;
   text-decoration: underline;
 }
@@ -443,7 +391,6 @@ section {
   border-radius: 16px;
 }
 .sidebar a {
-  font-family: "Myriad Pro";
   color: black;
 }
 .sidebar a:hover {
@@ -463,9 +410,6 @@ section {
   font-weight: bold;
 }
 
-.breadcrumbs {
-  font-family: "Myriad Pro";
-}
 .breadcrumbs * {
   color: #06c;
 }
@@ -486,7 +430,6 @@ section {
 }
 
 textarea {
-  font-family: "Myriad Pro";
   font-size: 16px;
   width: 100%;
   height: 100px;
@@ -503,7 +446,6 @@ input:focus {
 
 .search-input {
   width: 384px;
-  font-family: "Myriad Pro";
   font-size: 18px;
   padding: 8px 16px 6px 16px;
   border: none;
@@ -565,7 +507,6 @@ input:focus {
   width: 400px;
   height: auto;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
-  font-family: "Myriad Pro";
 }
 .modal > input {
   border: 1px solid #bbb;
@@ -624,12 +565,10 @@ input:focus {
   width: auto;
 }
 .cart-block-title {
-  font-family: "Myriad Pro";
   margin-bottom: 6px;
   color: #999;
 }
 .cart-block-value {
-  font-family: "Myriad Pro";
   font-size: 24px;
 }
 .cart-block-value.product-name {
@@ -662,7 +601,6 @@ input:focus {
   background-color: #D0021B;
   border-radius: 25px;
   font-size: 13px;
-  font-family: "Myriad Pro";
   padding: 3px 7px 0 7px;
 }
 
@@ -674,7 +612,6 @@ footer {
   align-items: center;
   background-color: #292e34;
   color: #bbb;
-  font-family: "Myriad Pro";
 }
 
 @media (max-width: 1216px) {
