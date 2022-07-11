@@ -698,10 +698,18 @@ footer {
 
   .map {
     margin-bottom: 32px;
+    margin-right: 0;
+    margin-top: 32px;
   }
   .map > iframe {
-    width: 90vw;
+    width: 82vw;
     height: 400px;
+  }
+
+  .product-container {
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 16px;
   }
 
   .items {
@@ -718,11 +726,6 @@ footer {
   }
   .items .breadcrumbs {
     width: 90vw;
-  }
-  .items .product-container {
-    width: 90vw;
-    padding: 16px;
-    box-sizing: border-box;
   }
   .items .product-image {
     width: 82vw;
