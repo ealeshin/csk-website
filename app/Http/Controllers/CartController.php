@@ -64,6 +64,12 @@ class CartController extends Controller
         }
     }
 
+    public function order(Request $request)
+    {
+        $request->session()->flush();
+        return response()->json($this->successCartResponse("Order sent"), 200);
+    }
+
     private function update($action, $request)
     {
         try {
