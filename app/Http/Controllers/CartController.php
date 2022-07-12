@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\FormHandler;
 
 class CartController extends Controller
 {
@@ -41,6 +42,11 @@ class CartController extends Controller
         return $cart;
     }
 
+    public static function getCartArrayOfStrings(Request $request)
+    {
+        return [];
+    }
+
     public static function isProductIdAdded(Request $request, $id)
     {
         $result = null;
@@ -66,8 +72,40 @@ class CartController extends Controller
 
     public function order(Request $request)
     {
-        $request->session()->flush();
-        return response()->json($this->successCartResponse("Order sent"), 200);
+        $mail = new FormHandler(
+            $request['name'],
+            $request['phone'],
+            $request['email'],
+            null,
+            $this->getCartArrayOfStrings($request)
+        );
+
+        try {
+            $mail->sendOrder();
+            $request->session()->flush();
+            return response()->json($this->successCartResponse("Order sent"), 200);
+        } catch (\Exception $e) {
+            return response()->json($this->errorCartResponse($e->getMessage), 400);
+        }
+    }
+
+    public function question(Request $request)
+    {
+        $mail = new FormHandler(
+            $request['name'],
+            $request['phone'],
+            $request['email'],
+            $request['question'],
+            []
+        );
+
+        try {
+            $mail->sendQuestion();
+            $request->session()->flush();
+            return response()->json($this->successCartResponse("Question sent"), 200);
+        } catch (\Exception $e) {
+            return response()->json($this->errorCartResponse($e->getMessage), 400);
+        }
     }
 
     private function update($action, $request)
