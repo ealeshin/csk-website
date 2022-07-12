@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Services\FormHandler;
 
@@ -44,7 +45,19 @@ class CartController extends Controller
 
     public static function getCartArrayOfStrings(Request $request)
     {
-        return [];
+        $data = $request->session()->all();
+        $result = [];
+        foreach ($data as $key => $value) {
+            if (str_contains($key, 'product_')) {
+                $id = substr($key, strpos($key, '_') + 1);
+                $product = Product::find($id);
+                if ($product) {
+                    array_push($result, $product->name . ' - ' . $value);
+                }
+            }
+        }
+
+        return $result;
     }
 
     public static function isProductIdAdded(Request $request, $id)
