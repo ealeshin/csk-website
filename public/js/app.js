@@ -186,8 +186,32 @@ if (orderButton) {
 
 if (sendButton) {
   sendButton.addEventListener('click', () => {
-    orderForm.style.display = 'none';
-    orderFormSuccess.style.display = 'flex';
+    let name = document.querySelector('#order_name');
+    let phone = document.querySelector('#order_phone');
+    let email = document.querySelector('#order_email');
+    if (phone.value.trim() == '' && email.value.trim() == '') {
+      alert('Введите телефон или E-mail, чтобы мы могли связаться с вами');
+    } else {
+      fetch('/api/order', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          phone: phone.value.trim(),
+          email: email.value.trim()
+        })
+      })
+      .then(response => {
+        orderForm.style.display = 'none';
+        orderFormSuccess.style.display = 'flex';
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
   });
 }
 
