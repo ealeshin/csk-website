@@ -236,11 +236,11 @@ if (sendButton) {
 if (modal) {
   modal.addEventListener('click', (event) => {
     event.stopPropagation();
-    if (event.target.classList.contains('shield')) {
+    let cl = event.target.classList;
+    if (cl.contains('shield') || cl.contains('modal-close')) {
       modal.style.display = 'none';
       orderForm.style.display = 'none';
       questionForm.style.display = 'none';
     }
   });
 }
-
