@@ -27,7 +27,7 @@ class FormHandler
         $data +=  ['data' => $this->data];
         $view = view('mail.order', $data)->render();
 
-        return $this->sendEmail($this->to, 'Order', $view);
+        return $this->sendEmail($this->to, 'Вопрос на cskone.ru', $view);
     }
 
     public function sendQuestion()
@@ -36,7 +36,7 @@ class FormHandler
         $data +=  ['question' => $this->text];
         $view = view('mail.question', $data)->render();
 
-        return $this->sendEmail($this->to, 'Question', $view);
+        return $this->sendEmail($this->to, 'Заказ на cskone.ru', $view);
     }
 
     protected function getCommonFields()
