@@ -52,6 +52,7 @@
                                     <input
                                         type="number"
                                         class="input-number"
+                                        min="0"
                                         value="@if($in_cart){{$in_cart}}@else{{1}}@endif"
                                         @if($in_cart) disabled @endif
                                     >

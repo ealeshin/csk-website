@@ -94,10 +94,28 @@ const cartButton = document.querySelector('.cart-button');
 const cartCount = document.querySelector('.input-number');
 
 if (cartButton) {
+  let countOldValue, countCursor;
+
+  const countKeydownHandler = (event) => {
+    let el = event.target;
+    countOldValue = el.value;
+    countCursor = el.selectionEnd;
+  };
+
+  const countInputHandler = (event) => {
+    let el = event.target;
+        newValue = el.value;
+
+    el.value = newValue.match(/^\d+$/) || newValue === "" ? newValue : countOldValue;
+  };
+
+  cartCount.addEventListener('keydown', countKeydownHandler);
+  cartCount.addEventListener('input', countInputHandler);
+
   cartButton.addEventListener('click', () => {
-    if (!cartButton.classList.contains('added-to-cart')) {
-      let id = cartButton.getAttribute('data-id');
-      let count = cartCount.value;
+    let id = cartButton.getAttribute('data-id');
+    let count = parseInt(cartCount.value);
+    if (!cartButton.classList.contains('added-to-cart') && count > 0) {
       fetch('/api/cart/add', {
         method: 'POST',
         headers: {
