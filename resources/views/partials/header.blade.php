@@ -17,7 +17,7 @@
         <div class="column">
             <div class="column logo-container">
                 <a href="/" class="logo-link">
-                    <img src="/images/logo.svg" alt="CSK Logo" class="logo">
+                    <img src="/images/logo.png" alt="CSK Logo" class="logo">
                 </a>
             </div>
             <div class="column nav">
