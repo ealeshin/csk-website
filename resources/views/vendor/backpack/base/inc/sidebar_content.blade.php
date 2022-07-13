@@ -30,3 +30,8 @@
         <i class="la la-list nav-icon"></i> Категории
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ backpack_url('unit') }}">
+        <i class="la la-calculator nav-icon"></i> Единицы измерения
+    </a>
+</li>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use App\Models\Unit;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -168,6 +169,12 @@ class ProductCrudController extends CrudController
                     'step' => 0.01
                 ],
                 'hint' => 'Цена в формате 123 или 1234,99 (разделитель - запятая)'
+            ],
+            [
+                'name' => 'unit',
+                'label' => 'Единица измерения',
+                'type' => 'select',
+                'allows_null' => false
             ],
             [
                 'name' => 'in_stock',

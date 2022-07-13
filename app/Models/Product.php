@@ -23,6 +23,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
+
     public static function getSearchResults()
     {
         return self::where('active', true)->pluck('name', 'id')->toArray();
