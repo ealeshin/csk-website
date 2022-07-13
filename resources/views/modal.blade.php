@@ -1,5 +1,6 @@
 <div class="shield">
     <div class="modal modal-form">
+        <div class="modal-close">&times;</div>
         <div class="modal-block heading">Отправка заказа</div>
         <div class="modal-block">Введите ваше имя и&nbsp;контактные данные</div>
         <input type="text" placeholder="Имя" id="order_name">
@@ -10,6 +11,7 @@
         </div>
     </div>
     <div class="modal modal-question">
+        <div class="modal-close">&times;</div>
         <div class="modal-block heading">Вопрос директору</div>
         <div class="modal-block">Введите ваше имя, контактные данные и&nbsp;текст вопроса</div>
         <input type="text" placeholder="Имя" id="question_name">

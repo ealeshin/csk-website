@@ -505,6 +505,7 @@ input:focus {
 }
 
 .modal {
+  position: relative;
   z-index: 21;
   display: flex;
   background-color: white;
@@ -516,6 +517,17 @@ input:focus {
   width: 400px;
   height: auto;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
+}
+.modal-close {
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  font-size: 24px;
+  color: #999;
+}
+.modal-close:hover {
+  color: black;
 }
 .modal > input {
   border: 1px solid #bbb;
