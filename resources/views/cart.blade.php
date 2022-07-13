@@ -21,7 +21,7 @@
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Количество</div>
-                    <div class="cart-block-value">{{$item['count']}}</div>
+                    <div class="cart-block-value">{{$item['count']}} {{$item['product']->unit->text}}</div>
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Сумма</div>

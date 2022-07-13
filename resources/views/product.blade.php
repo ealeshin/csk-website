@@ -42,13 +42,13 @@
                         <div class="product-price-block">
                             @if($product->in_stock)
                                 <div class="product-price-value">{{number_format($product->price, 2, ',', ' ')}} р</div>
-                                <div class="product-price-note">Цена за 1 шт.</div>
+                                <div class="product-price-note">Цена за {{$product->unit->text}}.</div>
                             @else
                                 <div>Временно нет в наличии</div>
                             @endif
                             @if($product->in_stock)
                                 <div class="product-price-cart">
-                                    Количество
+                                    Количество (в {{$product->unit->text}})
                                     <input
                                         type="number"
                                         class="input-number"

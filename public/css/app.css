@@ -291,7 +291,7 @@ section {
 .product-price-block {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 448px;
   margin-top: 32px;
 }
 .product-price-value {
