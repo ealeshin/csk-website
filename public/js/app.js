@@ -261,21 +261,24 @@ if (window.location.pathname.indexOf('cart') != -1) {
   cqButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       let cqInput = btn.previousElementSibling;
-      fetch('/api/cart/add', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          id: ~~(cqInput.getAttribute('data-id')),
-          count: parseInt(cqInput.value)
-        })
-      }).then((res) => {
-        window.location.reload();
-      }).catch((res) => {
-        console.log(res);
-      });
-    })
-  })
+      let cqInputValue = parseInt(cqInput.value.trim());
+      if (cqInputValue > 0) {
+        fetch('/api/cart/add', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: ~~(cqInput.getAttribute('data-id')),
+            count: cqInputValue
+          })
+        }).then((res) => {
+          window.location.reload();
+        }).catch((res) => {
+          console.log(res);
+        });
+      }
+    });
+  });
 }
