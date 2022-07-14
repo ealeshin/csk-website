@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Content;
 use App\Models\Partner;
 use Illuminate\Http\Request;
@@ -46,7 +47,9 @@ class PageController extends Controller
 
     public function contacts()
     {
-        return view('contacts');
+        return view('contacts', [
+            'contacts' => Contact::first()
+        ]);
     }
 
     public function about()

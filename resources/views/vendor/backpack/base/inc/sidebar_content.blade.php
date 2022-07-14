@@ -18,6 +18,9 @@
         <a class="nav-link" href="{{ backpack_url('content') }}">
             <i class="la la-info nav-icon"></i> О компании
         </a>
+        <a class="nav-link" href="{{ backpack_url('contacts') }}">
+            <i class="la la-map-pin nav-icon"></i> Контакты
+        </a>
     </ul>
 </li>
 <li class="nav-item">

@@ -53,8 +53,15 @@
             <div class="column nav">
                 <div class="column nm bp">
                     <div class="phone">
+                        @php
+                            $phone = null;
+                            $contact = \App\Models\Contact::first();
+                            if ($contact) {
+                                $phone = $contact->phone_main ?? null;
+                            }
+                        @endphp
                         <i class="la la-phone icon"></i>
-                        8 800 123-45-67
+                        {{$phone}}
                     </div>
                 </div>
                 <div class="column nm ui-links">
