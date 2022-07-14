@@ -113,7 +113,7 @@ class ProductCrudController extends CrudController
                 'function' => function($entry) {
                     $array = $entry->images;
                     foreach($array as $element) {
-                        echo "<img src=\"{$element['image']}\" width=\"200\" height=\"auto\"><br>";
+                        echo "<img src=\"{$element['image']}\" width=\"200\" height=\"auto\" vspace=\"10\"><br>";
                     }
                     return ' ';
                 }

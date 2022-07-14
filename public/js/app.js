@@ -1,13 +1,19 @@
+
+
 const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 5000,
-    }
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+      delay: 5000,
+  }
 });
 
 const formatPrice = (value) => {

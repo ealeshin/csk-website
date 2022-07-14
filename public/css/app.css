@@ -214,9 +214,27 @@ header {
   color: white;
   width: 100%;
   height: 400px;
+  margin-left: 0 !important;
+  margin-right: 64px !important;
+  background-color: transparent !important;
 }
 .swiper-slide {
   background-size: cover;
+}
+
+.swiper-gallery {
+  --swiper-theme-color: rgba(0, 0, 0, 0.33);
+  margin-right: 64px;
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+.swiper-gallery-slide {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 section {
@@ -865,5 +883,14 @@ footer {
   }
   .catalog .items {
     width: 100vw;
+  }
+
+  .swiper-gallery {
+    width: 100%;
+    height: calc(100vw - 64px);
+    margin: 25px auto;
+  }
+  .swiper-gallery-slide {
+    width: 90vw;
   }
 }

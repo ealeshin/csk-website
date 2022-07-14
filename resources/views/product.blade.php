@@ -13,7 +13,20 @@
             <div class="product-container">
                 <h1>{{$product->name}}</h1>
                 <div class="product-layout">
-                    <div class="product-image" style="background-image: url('{{$product->images[0]['image']}}');"></div>
+                    @if(count($product->images) > 1)
+                    <div class="swiper swiper-gallery">
+                        <div class="swiper-wrapper">
+                            @foreach($product->images as $image)
+                                <div class="swiper-slide swiper-gallery-slide" style="background-image: url('{{$image['image']}}');"></div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    @else
+                        <div class="product-image" style="background-image: url('{{$product->images[0]['image']}}');"></div>
+                    @endif
                     <div class="product-info">
                         @if($product->brand)
                         <div class="product-info-block">
