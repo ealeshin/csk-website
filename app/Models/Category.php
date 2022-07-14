@@ -60,6 +60,22 @@ class Category extends Model
         return $notEmpty;
     }
 
+    public static function getSelectOptionsArray()
+    {
+        $options = [];
+        $parentCategories = self::where('parent_id', null)->get();
+        foreach ($parentCategories as $parentCategory) {
+            $childCategories = self::where('parent_id', $parentCategory->id)->get();
+            foreach ($childCategories as $childCategory) {
+                $options += [
+                    $childCategory->id => $parentCategory->title . ': ' . $childCategory->title
+                ];
+            }
+        }
+        asort($options);
+        return $options;
+    }
+
     public function setImagesAttribute($value)
     {
         $attributeName = "image";

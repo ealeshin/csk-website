@@ -133,8 +133,9 @@ class ProductCrudController extends CrudController
             [
                 'name' => 'category',
                 'label' => 'Категория',
-                'type' => 'select',
-                'allows_null' => false
+                'type' => 'select_from_array',
+                'allows_null' => false,
+                'options' => Category::getSelectOptionsArray()
             ],
             [
                 'name' => 'code',
