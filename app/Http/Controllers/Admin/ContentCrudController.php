@@ -27,7 +27,8 @@ class ContentCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Content::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/content');
-        CRUD::setEntityNameStrings('Контент', 'Контент');
+        CRUD::setEntityNameStrings('Контент', 'О компании');
+        CRUD::denyAccess('create');
     }
 
     /**
