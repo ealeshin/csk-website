@@ -15,7 +15,7 @@
     @if($partners->count() > 0)
     <section>
         <div class="text-container centered">
-            <h1 class="alt-heading">Наши партнёры</h1>
+            <h1 class="alt-heading" id="partners">Наши партнёры</h1>
             @foreach ($partners as $partner)
                 <a href="{{$partner->link}}" target="_blank">
                     <img class="partner-logo" src="{{$partner->image}}" alt="{{$partner->name}}">

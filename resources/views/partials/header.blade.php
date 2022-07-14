@@ -44,7 +44,7 @@
                         <a href="/contacts" class="nav-link">Контакты</a>
                     </div>
                     <div class="column">
-                        <a href="/partnerrs" class="nav-link">Наши партнёры</a>
+                        <a href="/#partners" class="nav-link">Наши партнёры</a>
                     </div>
                 </div>
             </div>
