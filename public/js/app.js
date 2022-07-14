@@ -1,5 +1,3 @@
-
-
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
@@ -249,4 +247,35 @@ if (modal) {
       questionForm.style.display = 'none';
     }
   });
+}
+
+if (window.location.pathname.indexOf('cart') != -1) {
+  cqLinks = document.querySelectorAll('.change-quantity');
+  cqLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      let cqModal = link.nextElementSibling;
+      cqModal.style.display = 'flex';
+    });
+  });
+  cqButtons = document.querySelectorAll('.cq-button');
+  cqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      let cqInput = btn.previousElementSibling;
+      fetch('/api/cart/add', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id: ~~(cqInput.getAttribute('data-id')),
+          count: parseInt(cqInput.value)
+        })
+      }).then((res) => {
+        window.location.reload();
+      }).catch((res) => {
+        console.log(res);
+      });
+    })
+  })
 }

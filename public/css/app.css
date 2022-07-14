@@ -62,6 +62,11 @@ a.button {
   text-decoration: none;
 }
 
+a.cq {
+  margin-top: 12px;
+  text-align: center;
+}
+
 h1 {
   font-family: "Myriad Pro Semibold";
   font-weight: normal;
@@ -536,6 +541,14 @@ input:focus {
   height: auto;
   box-shadow: 1px 1px 24px rgba(0, 0, 0, 0.33);
 }
+.modal-change {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  font-size: 16px;
+}
 .modal-close {
   cursor: pointer;
   position: absolute;
@@ -557,6 +570,10 @@ input:focus {
 }
 .modal > input::placeholder {
   color: #bbb;
+}
+.modal > input.cq {
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 .modal-block {
   text-align: center;
@@ -607,11 +624,16 @@ input:focus {
   color: #999;
 }
 .cart-block-value {
+  position: relative;
   font-size: 24px;
 }
 .cart-block-value.product-name {
   font-size: 16px;
   padding-right: 16px;
+}
+.cart-block-value a.change-quantity {
+  color: #999;
+  font-size: 16px;
 }
 .cart-product {
   width: 400px;
@@ -843,6 +865,9 @@ footer {
   }
   .cart-block-value a {
     text-decoration: none;
+  }
+  .cart-block-value a.change-quantity {
+    text-decoration: underline;
   }
   .cart .order-button-column {
     width: 100%;

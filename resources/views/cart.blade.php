@@ -21,7 +21,15 @@
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Количество</div>
-                    <div class="cart-block-value">{{$item['count']}} {{$item['product']->unit->text}}</div>
+                    <div class="cart-block-value">
+                        {{$item['count']}} {{$item['product']->unit->text}}<br>
+                        <a class="change-quantity" href="javascript:void(0);">изменить</a>
+                        <div class="modal modal-change">
+                            Введите количество
+                            <input type="number" data-id="{{$item['product']->id}}" class="input-number cq" min="0" value="{{$item['count']}}">
+                            <a href="javascript:void(0);" class="button cq cq-button">ОК</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="cart-block-column">
                     <div class="cart-block-title">Сумма</div>
