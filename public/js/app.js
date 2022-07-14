@@ -1,3 +1,8 @@
+const xhrHeaders = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json'
+};
+
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
@@ -122,10 +127,7 @@ if (cartButton) {
     if (!cartButton.classList.contains('added-to-cart') && count > 0) {
       fetch('/api/cart/add', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
+        headers: xhrHeaders,
         body: JSON.stringify({
           id: id,
           count: count
@@ -156,10 +158,7 @@ if (deleteFromCartButtons.length > 0) {
       let id = button.getAttribute('data-id');
       fetch('/api/cart/delete', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
+        headers: xhrHeaders,
         body: JSON.stringify({id: id})
       })
       .then(response => {
@@ -216,10 +215,7 @@ if (sendButton) {
     } else {
       fetch('/api/order', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
+        headers: xhrHeaders,
         body: JSON.stringify({
           name: name.value.trim(),
           phone: phone.value.trim(),
@@ -265,10 +261,7 @@ if (window.location.pathname.indexOf('cart') != -1) {
       if (cqInputValue > 0) {
         fetch('/api/cart/add', {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
+          headers: xhrHeaders,
           body: JSON.stringify({
             id: ~~(cqInput.getAttribute('data-id')),
             count: cqInputValue
