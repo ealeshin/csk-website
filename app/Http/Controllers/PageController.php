@@ -62,7 +62,7 @@ class PageController extends Controller
     public function catalog()
     {
         return view('catalog', [
-            'products' => Product::getPopular(),
+            'products' => Product::take(100)->get(),
             'current' => null
         ]);
     }
