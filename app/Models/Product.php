@@ -40,7 +40,7 @@ class Product extends Model
 
     public static function getPopular()
     {
-        return self::take(4)->get();
+        return self::orderByDesc('id')->take(4)->get();
     }
 
     public function setImagesAttribute($value)
