@@ -35,10 +35,13 @@ class PageController extends Controller
         $items = [];
         $cart = CartController::getCartArray($request);
         foreach ($cart as $id => $count) {
-            array_push($items, [
-                'product' => Product::find($id) ?? null,
-                'count' => $count
-            ]);
+            $product = Product::find($id);
+            if ($product) {
+                array_push($items, [
+                    'product' => $product,
+                    'count' => $count
+                ]);
+            }
         }
         return view('cart', [
             'items' => $items
