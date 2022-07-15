@@ -293,6 +293,8 @@ section {
   width: 400px;
   height: 400px;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: 64px;
 }
 .product-info {
@@ -375,6 +377,8 @@ section {
   width: 262px;
   height: 262px;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .items .card-title {
   margin: 12px 0;
@@ -644,6 +648,8 @@ input:focus {
   width: 128px;
   height: 128px;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .cart-image-blank {
   height: 64px;
