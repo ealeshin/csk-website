@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Unit;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -135,7 +136,8 @@ class ProductCrudController extends CrudController
                 'label' => 'Категория',
                 'type' => 'select_from_array',
                 'allows_null' => false,
-                'options' => Category::getSelectOptionsArray()
+                'options' => Category::getSelectOptionsArray(),
+                'default' => Product::lastAddedCategoryId()
             ],
             [
                 'name' => 'code',

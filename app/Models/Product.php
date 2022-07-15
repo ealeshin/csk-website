@@ -43,6 +43,11 @@ class Product extends Model
         return self::orderByDesc('id')->take(4)->get();
     }
 
+    public static function lastAddedCategoryId()
+    {
+        return self::latest()->first()->getAttribute('category_id');
+    }
+
     public function setImagesAttribute($value)
     {
         $attributeName = "images";
