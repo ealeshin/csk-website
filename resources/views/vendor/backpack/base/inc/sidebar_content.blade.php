@@ -38,3 +38,8 @@
         <i class="la la-calculator nav-icon"></i> Единицы измерения
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ backpack_url('settings') }}">
+        <i class="la la-tools nav-icon"></i> Настройки
+    </a>
+</li>
