@@ -41,6 +41,8 @@ class PageController extends Controller
                     'product' => $product,
                     'count' => $count
                 ]);
+            } else {
+                $request->session()->forget('product_'.$id);
             }
         }
         return view('cart', [
